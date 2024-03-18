@@ -1,0 +1,1733 @@
+﻿Program.Sub.ScreenSU.Start
+Gui.F_SaldoInsoluto..Create(BaseForm)
+Gui.F_SaldoInsoluto..Caption("Revision de Saldos Insolutos")
+Gui.F_SaldoInsoluto..Size(7365,4935)
+Gui.F_SaldoInsoluto..MinX(0)
+Gui.F_SaldoInsoluto..MinY(0)
+Gui.F_SaldoInsoluto..Position(0,0)
+Gui.F_SaldoInsoluto..BackColor(-2147483633)
+Gui.F_SaldoInsoluto..MousePointer(0)
+Gui.F_SaldoInsoluto..Event(UnLoad,UnLoad)
+Gui.F_SaldoInsoluto..AlwaysOnTop(False)
+Gui.F_SaldoInsoluto..FontName("Tahoma")
+Gui.F_SaldoInsoluto..FontSize(8.25)
+Gui.F_SaldoInsoluto..ControlBox(True)
+Gui.F_SaldoInsoluto..MaxButton(True)
+Gui.F_SaldoInsoluto..MinButton(True)
+Gui.F_SaldoInsoluto..Moveable(True)
+Gui.F_SaldoInsoluto..Sizeable(True)
+Gui.F_SaldoInsoluto..ShowInTaskBar(True)
+Gui.F_SaldoInsoluto..TitleBar(True)
+Gui.F_SaldoInsoluto.cmdBatchB.Create(Button)
+Gui.F_SaldoInsoluto.cmdBatchB.Size(450,375)
+Gui.F_SaldoInsoluto.cmdBatchB.Position(4635,645)
+Gui.F_SaldoInsoluto.cmdBatchB.Caption("^")
+Gui.F_SaldoInsoluto.cmdBatchB.Event(Click,cmdBatchB_Click)
+Gui.F_SaldoInsoluto.cmdBatchB.Visible(False)
+Gui.F_SaldoInsoluto.cmdBatchB.Enabled(True)
+Gui.F_SaldoInsoluto.cmdBatchB.Zorder(0)
+Gui.F_SaldoInsoluto.cmdBatchB.FontName("Tahoma")
+Gui.F_SaldoInsoluto.cmdBatchB.FontSize(8.25)
+Gui.F_SaldoInsoluto.lblBatchB.Create(Label,"Batch:",False,570,240,0,345,765,True,0,"Arial",10,-2147483633,0,0)
+Gui.F_SaldoInsoluto.lblBatchB.BorderStyle(0)
+Gui.F_SaldoInsoluto.cmdSaveSaldoInsolutoXBatch.Create(Button)
+Gui.F_SaldoInsoluto.cmdSaveSaldoInsolutoXBatch.Size(2205,465)
+Gui.F_SaldoInsoluto.cmdSaveSaldoInsolutoXBatch.Position(4875,3750)
+Gui.F_SaldoInsoluto.cmdSaveSaldoInsolutoXBatch.Caption("Actualizar Batch")
+Gui.F_SaldoInsoluto.cmdSaveSaldoInsolutoXBatch.FontSize(10)
+Gui.F_SaldoInsoluto.cmdSaveSaldoInsolutoXBatch.Event(Click,cmdSaveSaldoInsolutoXBatch_Click)
+Gui.F_SaldoInsoluto.cmdSaveSaldoInsolutoXBatch.Visible(False)
+Gui.F_SaldoInsoluto.cmdSaveSaldoInsolutoXBatch.Enabled(True)
+Gui.F_SaldoInsoluto.cmdSaveSaldoInsolutoXBatch.Zorder(0)
+Gui.F_SaldoInsoluto.cmdSaveSaldoInsolutoXBatch.FontName("Tahoma")
+Gui.F_SaldoInsoluto.txtBatchB.Create(TextBox,"",False,1485,300,0,2985,675,True,0,"Arial",8,-2147483643,1)
+Gui.F_SaldoInsoluto.txtBatchB.Locked(True)
+Gui.F_SaldoInsoluto.lblSalAntB.Create(Label,"Saldo Anterior:",False,1290,240,0,345,2040,True,0,"Arial",10,-2147483633,0,0)
+Gui.F_SaldoInsoluto.lblSalAntB.BorderStyle(0)
+Gui.F_SaldoInsoluto.txtSaldoAntB.Create(TextBox,"",False,1485,300,0,2985,1980,True,0,"Arial",8,-2147483643,1)
+Gui.F_SaldoInsoluto.txtSaldoAntB.NumericOnly(1)
+Gui.F_SaldoInsoluto.lblSaldoxBatch.Create(Label,"Saldo Insoluto:",False,1290,240,0,345,2895,True,0,"Arial",10,-2147483633,0,0)
+Gui.F_SaldoInsoluto.lblSaldoxBatch.BorderStyle(0)
+Gui.F_SaldoInsoluto.txtSaldoInsolutoXBatch.Create(TextBox,"",False,1485,300,0,2985,2835,True,0,"Arial",8,-2147483643,1)
+Gui.F_SaldoInsoluto.txtSaldoInsolutoXBatch.NumericOnly(1)
+Gui.F_SaldoInsoluto.lblImpPagadoB.Create(Label,"Importe Pagado:",False,1425,240,0,345,2415,True,0,"Arial",10,-2147483633,0,0)
+Gui.F_SaldoInsoluto.lblImpPagadoB.BorderStyle(0)
+Gui.F_SaldoInsoluto.txtImpPagB.Create(TextBox,"",False,1485,300,0,2985,2400,True,0,"Arial",8,-2147483643,1)
+Gui.F_SaldoInsoluto.txtImpPagB.NumericOnly(1)
+Gui.F_SaldoInsoluto.lblIDocB.Create(Label,"ID Documento:",False,1290,240,0,345,1620,True,0,"Arial",10,-2147483633,0,0)
+Gui.F_SaldoInsoluto.lblIDocB.BorderStyle(0)
+Gui.F_SaldoInsoluto.txtIDDoc.Create(TextBox,"",False,3645,300,0,2985,1545,True,0,"Arial",8,-2147483643,1)
+Gui.F_SaldoInsoluto.txtIDDoc.Locked(True)
+Gui.F_SaldoInsoluto.chkBatch.Create(CheckBox)
+Gui.F_SaldoInsoluto.chkBatch.Size(1560,300)
+Gui.F_SaldoInsoluto.chkBatch.Position(405,285)
+Gui.F_SaldoInsoluto.chkBatch.Caption("Por Batch")
+Gui.F_SaldoInsoluto.chkBatch.FontSize(10)
+Gui.F_SaldoInsoluto.chkBatch.Event(Click,chkBatch_Click)
+Gui.F_SaldoInsoluto.chkBatch.Enabled(True)
+Gui.F_SaldoInsoluto.chkBatch.Visible(True)
+Gui.F_SaldoInsoluto.chkBatch.Zorder(0)
+Gui.F_SaldoInsoluto.chkBatch.FontName("Tahoma")
+Gui.F_SaldoInsoluto.chkInvoice.Create(CheckBox)
+Gui.F_SaldoInsoluto.chkInvoice.Size(2160,300)
+Gui.F_SaldoInsoluto.chkInvoice.Position(2970,240)
+Gui.F_SaldoInsoluto.chkInvoice.Caption("Saldo por Factura")
+Gui.F_SaldoInsoluto.chkInvoice.FontSize(10)
+Gui.F_SaldoInsoluto.chkInvoice.Event(Click,chkInvoice_Click)
+Gui.F_SaldoInsoluto.chkInvoice.Enabled(True)
+Gui.F_SaldoInsoluto.chkInvoice.Visible(True)
+Gui.F_SaldoInsoluto.chkInvoice.Zorder(0)
+Gui.F_SaldoInsoluto.chkInvoice.FontName("Tahoma")
+Gui.F_SaldoInsoluto.lblInvoiceI.Create(Label,"Factura",False,660,240,0,345,1170,True,0,"Arial",10,-2147483633,0,0)
+Gui.F_SaldoInsoluto.lblInvoiceI.BorderStyle(0)
+Gui.F_SaldoInsoluto.txtInvoiceI.Create(TextBox,"",False,1485,300,0,2985,1110,True,0,"Arial",8,-2147483643,1)
+Gui.F_SaldoInsoluto.txtInvoiceI.Locked(True)
+Gui.F_SaldoInsoluto.cmdInvoiceI.Create(Button)
+Gui.F_SaldoInsoluto.cmdInvoiceI.Size(450,375)
+Gui.F_SaldoInsoluto.cmdInvoiceI.Position(4635,1080)
+Gui.F_SaldoInsoluto.cmdInvoiceI.Caption("^")
+Gui.F_SaldoInsoluto.cmdInvoiceI.Event(Click,cmdInvoiceI_Click)
+Gui.F_SaldoInsoluto.cmdInvoiceI.Visible(False)
+Gui.F_SaldoInsoluto.cmdInvoiceI.Enabled(True)
+Gui.F_SaldoInsoluto.cmdInvoiceI.Zorder(0)
+Gui.F_SaldoInsoluto.cmdInvoiceI.FontName("Tahoma")
+Gui.F_SaldoInsoluto.cmdInvoiceI.FontSize(8.25)
+Gui.F_SaldoInsoluto.lblNumParI.Create(Label,"Num. Parcialidad",False,1485,240,0,345,1590,True,0,"Arial",10,-2147483633,0,0)
+Gui.F_SaldoInsoluto.lblNumParI.BorderStyle(0)
+Gui.F_SaldoInsoluto.txtNumPar.Create(TextBox,"",False,1485,300,0,2985,1545,True,0,"Arial",8,-2147483643,1)
+Gui.F_SaldoInsoluto.lblSaldoXInvoice.Create(Label,"Saldo Insoluto:",False,1290,240,0,345,2025,True,0,"Arial",10,-2147483633,0,0)
+Gui.F_SaldoInsoluto.lblSaldoXInvoice.BorderStyle(0)
+Gui.F_SaldoInsoluto.txtSaldoXInvoice.Create(TextBox,"",False,1485,300,0,2985,1995,True,0,"Arial",8,-2147483643,1)
+Gui.F_SaldoInsoluto.txtSaldoXInvoice.NumericOnly(1)
+Gui.F_SaldoInsoluto.cmdSaveSaldoInsolutoXInvoice.Create(Button)
+Gui.F_SaldoInsoluto.cmdSaveSaldoInsolutoXInvoice.Size(2205,465)
+Gui.F_SaldoInsoluto.cmdSaveSaldoInsolutoXInvoice.Position(4830,3750)
+Gui.F_SaldoInsoluto.cmdSaveSaldoInsolutoXInvoice.Caption("Actualizar Factura")
+Gui.F_SaldoInsoluto.cmdSaveSaldoInsolutoXInvoice.FontSize(10)
+Gui.F_SaldoInsoluto.cmdSaveSaldoInsolutoXInvoice.Event(Click,cmdSaveSaldoInsolutoXInvoice_Click)
+Gui.F_SaldoInsoluto.cmdSaveSaldoInsolutoXInvoice.Visible(False)
+Gui.F_SaldoInsoluto.cmdSaveSaldoInsolutoXInvoice.Enabled(True)
+Gui.F_SaldoInsoluto.cmdSaveSaldoInsolutoXInvoice.Zorder(0)
+Gui.F_SaldoInsoluto.cmdSaveSaldoInsolutoXInvoice.FontName("Tahoma")
+Gui.F_SaldoInsoluto.cmdStopPay.Create(Button)
+Gui.F_SaldoInsoluto.cmdStopPay.Enabled(True)
+Gui.F_SaldoInsoluto.cmdStopPay.Visible(False)
+Gui.F_SaldoInsoluto.cmdStopPay.Zorder(0)
+Gui.F_SaldoInsoluto.cmdStopPay.Size(2205,465)
+Gui.F_SaldoInsoluto.cmdStopPay.Position(270,3750)
+Gui.F_SaldoInsoluto.cmdStopPay.Caption("Detener Timbrado Pago")
+Gui.F_SaldoInsoluto.cmdStopPay.FontName("Tahoma")
+Gui.F_SaldoInsoluto.cmdStopPay.FontSize(10)
+Gui.F_SaldoInsoluto.cmdStopPay.Event(Click,cmdPararPago_Click)
+Gui.F_SaldoInsoluto.cmdStartPay.Create(Button)
+Gui.F_SaldoInsoluto.cmdStartPay.Enabled(True)
+Gui.F_SaldoInsoluto.cmdStartPay.Visible(False)
+Gui.F_SaldoInsoluto.cmdStartPay.Zorder(0)
+Gui.F_SaldoInsoluto.cmdStartPay.Size(2205,465)
+Gui.F_SaldoInsoluto.cmdStartPay.Position(2535,3750)
+Gui.F_SaldoInsoluto.cmdStartPay.Caption("Reiniciar Timbrado Pago")
+Gui.F_SaldoInsoluto.cmdStartPay.FontName("Tahoma")
+Gui.F_SaldoInsoluto.cmdStartPay.FontSize(10)
+Gui.F_SaldoInsoluto.cmdStartPay.Event(Click,cmdPararPago2_Click)
+Gui.F_SaldoInsoluto.lblTimbrar.Create(Label,"Timbrar:",False,705,240,0,345,3330,True,0,"Arial",10,-2147483633,0,0)
+Gui.F_SaldoInsoluto.lblTimbrar.BorderStyle(0)
+Gui.F_SaldoInsoluto.txtTimbrar.Create(TextBox,"",False,1485,300,0,2985,3255,True,0,"Arial",8,-2147483643,1)
+Gui.F_SaldoInsoluto.txtTimbrar.Locked(True)
+Gui.F_SaldoInsoluto.lblTimbrar2.Create(Label,"N=Timbrado Y=Pendiente a Timbrar P=Timbrado Pausado",False,3105,150,0,2340,3585,True,0,"Tahoma",6,,0,0)
+Gui.F_SaldoInsoluto.lblTimbrar2.BorderStyle(0)
+Gui.F_SaldoInsoluto.lblTimbrar2.ForeColor(255)
+Gui.F_CompPagos_Dash..Create(BaseForm)
+Gui.F_CompPagos_Dash..Caption("Dashboard Complemento De Pagos")
+Gui.F_CompPagos_Dash..Size(21360,12870)
+Gui.F_CompPagos_Dash..MinX(20505)
+Gui.F_CompPagos_Dash..MinY(12225)
+Gui.F_CompPagos_Dash..Position(0,0)
+Gui.F_CompPagos_Dash..BackColor(-2147483633)
+Gui.F_CompPagos_Dash..MousePointer(0)
+Gui.F_CompPagos_Dash..Event(UnLoad,UnLoad)
+Gui.F_CompPagos_Dash..AlwaysOnTop(False)
+Gui.F_CompPagos_Dash..FontName("Tahoma")
+Gui.F_CompPagos_Dash..FontSize(8.25)
+Gui.F_CompPagos_Dash..ControlBox(True)
+Gui.F_CompPagos_Dash..MaxButton(True)
+Gui.F_CompPagos_Dash..MinButton(True)
+Gui.F_CompPagos_Dash..Moveable(True)
+Gui.F_CompPagos_Dash..Sizeable(True)
+Gui.F_CompPagos_Dash..ShowInTaskBar(True)
+Gui.F_CompPagos_Dash..TitleBar(True)
+Gui.F_CompPagos_Dash.picGSSLogo.Create(PictureBox)
+Gui.F_CompPagos_Dash.picGSSLogo.Size(5880,1095)
+Gui.F_CompPagos_Dash.picGSSLogo.Position(7155,60)
+Gui.F_CompPagos_Dash.picGSSLogo.Enabled(True)
+Gui.F_CompPagos_Dash.picGSSLogo.Visible(True)
+Gui.F_CompPagos_Dash.picGSSLogo.Zorder(0)
+Gui.F_CompPagos_Dash.tabGridDocRel.Create(Tab)
+Gui.F_CompPagos_Dash.tabGridDocRel.Size(21270,6180)
+Gui.F_CompPagos_Dash.tabGridDocRel.Position(60,1515)
+Gui.F_CompPagos_Dash.tabGridDocRel.Event(Click,tabGrid_Click)
+Gui.F_CompPagos_Dash.tabGridDocRel.Enabled(True)
+Gui.F_CompPagos_Dash.tabGridDocRel.Visible(True)
+Gui.F_CompPagos_Dash.tabGridDocRel.Zorder(0)
+Gui.F_CompPagos_Dash.tabGridDocRel.FontName("Tahoma")
+Gui.F_CompPagos_Dash.tabGridDocRel.FontSize(8.25)
+Gui.F_CompPagos_Dash.tabGridDocRel.Tabs(4)
+Gui.F_CompPagos_Dash.tabGridDocRel.SetTab(0)
+Gui.F_CompPagos_Dash.tabGridDocRel.Caption("Documentos Relacionados")
+Gui.F_CompPagos_Dash.tabGridDocRel.SetTab(1)
+Gui.F_CompPagos_Dash.tabGridDocRel.Caption("Saldos Por Factura")
+Gui.F_CompPagos_Dash.tabGridDocRel.SetTab(2)
+Gui.F_CompPagos_Dash.tabGridDocRel.Caption("Notas de Credito")
+Gui.F_CompPagos_Dash.tabGridDocRel.SetTab(3)
+Gui.F_CompPagos_Dash.tabGridDocRel.Caption("Errores de Complemento")
+Gui.F_CompPagos_Dash.GsGridErrores.Create(GsGridControl)
+Gui.F_CompPagos_Dash.GsGridErrores.Size(19320,4305)
+Gui.F_CompPagos_Dash.GsGridErrores.Position(0,0)
+Gui.F_CompPagos_Dash.GsGridErrores.Parent("tabGridDocRel",3)
+Gui.F_CompPagos_Dash.GsGridErrores.Enabled(True)
+Gui.F_CompPagos_Dash.GsGridErrores.Visible(True)
+Gui.F_CompPagos_Dash.GsGridErrores.Zorder(0)
+Gui.F_CompPagos_Dash.GsGridNotasCredito.Create(GsGridControl)
+Gui.F_CompPagos_Dash.GsGridNotasCredito.Enabled(True)
+Gui.F_CompPagos_Dash.GsGridNotasCredito.Visible(True)
+Gui.F_CompPagos_Dash.GsGridNotasCredito.Zorder(0)
+Gui.F_CompPagos_Dash.GsGridNotasCredito.Size(19290,4215)
+Gui.F_CompPagos_Dash.GsGridNotasCredito.Position(15,0)
+Gui.F_CompPagos_Dash.GsGridNotasCredito.Parent("tabGridDocRel",2)
+Gui.F_CompPagos_Dash.GsGridSaldos.Create(GsGridControl)
+Gui.F_CompPagos_Dash.GsGridSaldos.Enabled(True)
+Gui.F_CompPagos_Dash.GsGridSaldos.Visible(True)
+Gui.F_CompPagos_Dash.GsGridSaldos.Zorder(0)
+Gui.F_CompPagos_Dash.GsGridSaldos.Size(19290,4215)
+Gui.F_CompPagos_Dash.GsGridSaldos.Position(0,15)
+Gui.F_CompPagos_Dash.GsGridSaldos.Parent("tabGridDocRel",1)
+Gui.F_CompPagos_Dash.GsGridDocRel.Create(GsGridControl)
+Gui.F_CompPagos_Dash.GsGridDocRel.Size(21045,5640)
+Gui.F_CompPagos_Dash.GsGridDocRel.Position(90,30)
+Gui.F_CompPagos_Dash.GsGridDocRel.Parent("tabGridDocRel",0)
+Gui.F_CompPagos_Dash.GsGridDocRel.Enabled(True)
+Gui.F_CompPagos_Dash.GsGridDocRel.Visible(True)
+Gui.F_CompPagos_Dash.GsGridDocRel.Zorder(0)
+Gui.F_CompPagos_Dash.GsGridDocRel.Event(CellValueChanged,GsGridDocRel_CellValueChanged)
+Gui.F_CompPagos_Dash.GsGridDocRel.Event(RowCellClick,GsGridDocRel_RowCellClick)
+Gui.F_CompPagos_Dash.chkAll.Create(CheckBox)
+Gui.F_CompPagos_Dash.chkAll.Size(1695,300)
+Gui.F_CompPagos_Dash.chkAll.Position(75,135)
+Gui.F_CompPagos_Dash.chkAll.Caption("Todos los Pagos")
+Gui.F_CompPagos_Dash.chkAll.Event(Click,chkAll_Click)
+Gui.F_CompPagos_Dash.chkAll.Enabled(True)
+Gui.F_CompPagos_Dash.chkAll.Visible(True)
+Gui.F_CompPagos_Dash.chkAll.Zorder(0)
+Gui.F_CompPagos_Dash.chkAll.FontName("Tahoma")
+Gui.F_CompPagos_Dash.chkAll.FontSize(8.25)
+Gui.F_CompPagos_Dash.cmdExport.Create(Button)
+Gui.F_CompPagos_Dash.cmdExport.Size(1380,375)
+Gui.F_CompPagos_Dash.cmdExport.Position(19635,270)
+Gui.F_CompPagos_Dash.cmdExport.Caption("Exportar")
+Gui.F_CompPagos_Dash.cmdExport.Enabled(True)
+Gui.F_CompPagos_Dash.cmdExport.Visible(True)
+Gui.F_CompPagos_Dash.cmdExport.Zorder(0)
+Gui.F_CompPagos_Dash.cmdExport.FontName("Tahoma")
+Gui.F_CompPagos_Dash.cmdExport.FontSize(7.8)
+Gui.F_CompPagos_Dash.cmdExport.Event(Click,cmdExport_Click)
+Gui.F_CompPagos_Dash.chkPerBatch.Create(CheckBox)
+Gui.F_CompPagos_Dash.chkPerBatch.Size(1335,300)
+Gui.F_CompPagos_Dash.chkPerBatch.Position(75,615)
+Gui.F_CompPagos_Dash.chkPerBatch.Caption("Por ID Pago")
+Gui.F_CompPagos_Dash.chkPerBatch.Event(Click,chkPerBatch_Click)
+Gui.F_CompPagos_Dash.chkPerBatch.Enabled(True)
+Gui.F_CompPagos_Dash.chkPerBatch.Visible(True)
+Gui.F_CompPagos_Dash.chkPerBatch.Zorder(0)
+Gui.F_CompPagos_Dash.chkPerBatch.FontName("Tahoma")
+Gui.F_CompPagos_Dash.chkPerBatch.FontSize(8.25)
+Gui.F_CompPagos_Dash.cmdRefresh.Create(Button)
+Gui.F_CompPagos_Dash.cmdRefresh.Size(330,375)
+Gui.F_CompPagos_Dash.cmdRefresh.Position(2415,150)
+Gui.F_CompPagos_Dash.cmdRefresh.Caption("REFRESH")
+Gui.F_CompPagos_Dash.cmdRefresh.Event(Click,cmdRefresh_Click)
+Gui.F_CompPagos_Dash.cmdRefresh.Enabled(True)
+Gui.F_CompPagos_Dash.cmdRefresh.Visible(True)
+Gui.F_CompPagos_Dash.cmdRefresh.Zorder(0)
+Gui.F_CompPagos_Dash.cmdRefresh.FontName("Tahoma")
+Gui.F_CompPagos_Dash.cmdRefresh.FontSize(8.25)
+Gui.F_CompPagos_Dash.txtBatch.Create(TextBox,"",False,1215,300,0,1605,675,True,0,"Arial",8,-2147483643,1)
+Gui.F_CompPagos_Dash.txtBatch.Event(Click,txtBatch_Click)
+Gui.F_CompPagos_Dash.lblStatus.Create(Label,"Cargando...",False,1935,255,0,8685,1470,True,0,"Arial",8,-2147483633,0,0)
+Gui.F_CompPagos_Dash.lblStatus.BorderStyle(0)
+Gui.F_CompPagos_Dash.pbStatus.Create(ProgressBar)
+Gui.F_CompPagos_Dash.pbStatus.Visible(False)
+Gui.F_CompPagos_Dash.pbStatus.Size(3735,255)
+Gui.F_CompPagos_Dash.pbStatus.Position(10710,1200)
+Gui.F_CompPagos_Dash.tabGridPagos.Create(Tab)
+Gui.F_CompPagos_Dash.tabGridPagos.Enabled(True)
+Gui.F_CompPagos_Dash.tabGridPagos.Visible(True)
+Gui.F_CompPagos_Dash.tabGridPagos.Zorder(0)
+Gui.F_CompPagos_Dash.tabGridPagos.Size(20985,4470)
+Gui.F_CompPagos_Dash.tabGridPagos.Position(90,7755)
+Gui.F_CompPagos_Dash.tabGridPagos.FontName("Tahoma")
+Gui.F_CompPagos_Dash.tabGridPagos.FontSize(8.25)
+Gui.F_CompPagos_Dash.tabGridPagos.Event(Click,tabGridPagos_Click)
+Gui.F_CompPagos_Dash.tabGridPagos.Tabs(1)
+Gui.F_CompPagos_Dash.tabGridPagos.SetTab(0)
+Gui.F_CompPagos_Dash.tabGridPagos.Caption("Pagos")
+Gui.F_CompPagos_Dash.GsGridPago.Create(GsGridControl)
+Gui.F_CompPagos_Dash.GsGridPago.Size(20850,4905)
+Gui.F_CompPagos_Dash.GsGridPago.Position(0,165)
+Gui.F_CompPagos_Dash.GsGridPago.Parent("tabGridPagos",0)
+Gui.F_CompPagos_Dash.GsGridPago.Enabled(True)
+Gui.F_CompPagos_Dash.GsGridPago.Visible(True)
+Gui.F_CompPagos_Dash.GsGridPago.Zorder(0)
+Gui.F_CompPagos_Dash.GsGridPago.Event(CellValueChanged,GsGridPago_CellValueChanged)
+Gui.F_CompPagos_Dash.GsGridPago.Event(RowCellClick,GsGridPago_RowCellClick)
+Program.Sub.ScreenSU.End
+
+Program.Sub.Preflight.Start
+Program.Sub.Preflight.End
+
+Program.Sub.Main.Start
+F.Intrinsic.Control.Try
+
+	V.Local.sError.Declare
+	V.Local.sIcon.Declare
+	V.Local.sGssLogo.Declare
+
+	F.ODBC.Connection!con.OpenCompanyConnection
+
+	f.Intrinsic.Control.If(v.Caller.Switches,=,"P") 'DASHBOARD COMPLEMENTO DE PAGOS
+		
+		gui.F_CompPagos_Dash.tabGridDocRel.SetTab(0)	
+		F.Intrinsic.String.Build("{0}\ART\gss2.ico",V.Caller.GlobalDir,v.Local.sIcon)
+		F.Intrinsic.String.Build("{0}\ART\GAB_GSS_Logo_Green_Dash.png",V.Caller.GlobalDir,V.Local.sGssLogo)
+		gui.F_CompPagos_Dash.picGSSLogo.Picture(V.Local.sGssLogo)
+		gui.F_CompPagos_Dash..Icon(V.Local.sIcon)
+		gui.F_CompPagos_Dash..Show
+		gui.F_CompPagos_Dash.pbStatus.Min(0)
+		gui.F_CompPagos_Dash.lblStatus.Visible(True)
+		gui.F_CompPagos_Dash.pbStatus.Max(100)
+		gui.F_CompPagos_Dash.lblStatus.Visible(False)
+	
+	f.Intrinsic.Control.ElseIf(v.Caller.Switches,=,"S") 'MODIFICACION DE SALDO INSOLUTO
+		GUI.F_SaldoInsoluto..Show
+	f.Intrinsic.Control.EndIf
+			
+
+F.Intrinsic.Control.Catch
+	F.Intrinsic.String.Build("Project: {0}{1}{1}Subroutine: {2}{1}Error Occurred {3} with description {4}{1}{1}GAB Version: {5}",V.Ambient.ScriptPath,V.Ambient.Newline,V.Ambient.CurrentSubroutine,V.Ambient.ErrorNumber,V.Ambient.ErrorDescription,V.Ambient.GABVersion,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+	f.Intrinsic.Control.CallSub(UnLoad)
+	F.Intrinsic.Control.End
+
+F.Intrinsic.Control.EndTry
+Program.Sub.Main.End
+'''''''''''''''''''''' PAGOS DASHBOARD ''''''''''''''''''''''
+Program.Sub.cmdRefresh_Click.Start
+F.Intrinsic.Control.Try
+	V.Local.sError.Declare
+	
+	f.Intrinsic.Control.If(v.Screen.F_CompPagos_Dash!chkAll.Value,=,1,"or",v.Screen.F_CompPagos_Dash!chkPerBatch.Value,=,1)
+		f.Intrinsic.Control.CallSub(DocRelLoad)
+		f.Intrinsic.Control.CallSub(ErroresLoad)
+		f.Intrinsic.Control.CallSub(PagoLoad)
+		f.Intrinsic.Control.CallSub(NCLoad)
+		f.Intrinsic.Control.CallSub(SaldosLoad)
+	f.Intrinsic.Control.Else
+		f.Intrinsic.UI.Msgbox("Favor de seleccionar la opcion deseada")
+	f.Intrinsic.Control.EndIf
+	
+
+
+F.Intrinsic.Control.Catch
+	F.Intrinsic.String.Build("Project: {0}{1}{1}Subroutine: {2}{1}Error Occurred {3} with description {4}{1}{1}GAB Version: {5}",V.Ambient.ScriptPath,V.Ambient.Newline,V.Ambient.CurrentSubroutine,V.Ambient.ErrorNumber,V.Ambient.ErrorDescription,V.Ambient.GABVersion,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+	f.Intrinsic.Control.CallSub(UnLoad)
+	F.Intrinsic.Control.End
+
+F.Intrinsic.Control.EndTry
+
+Program.Sub.cmdRefresh_Click.End
+
+Program.Sub.chkPerBatch_Click.Start
+F.Intrinsic.Control.Try
+V.Local.sError.Declare
+	F.Intrinsic.Control.BlockEvents
+	f.Intrinsic.Control.If(v.Screen.F_CompPagos_Dash!chkPerBatch.Value,=,1)
+		gui.F_CompPagos_Dash.chkAll.Value(0)
+		gui.F_CompPagos_Dash.txtBatch.Visible(True)
+	F.Intrinsic.Control.Else
+		gui.F_CompPagos_Dash.txtBatch.Visible(False)
+		gui.F_CompPagos_Dash.chkAll.Value(1)
+	f.Intrinsic.Control.EndIf
+	F.Intrinsic.Control.UnBlockEvents
+
+F.Intrinsic.Control.Catch
+	F.Intrinsic.String.Build("Project: {0}{1}{1}Subroutine: {2}{1}Error Occurred {3} with description {4}{1}{1}GAB Version: {5}",V.Ambient.ScriptPath,V.Ambient.Newline,V.Ambient.CurrentSubroutine,V.Ambient.ErrorNumber,V.Ambient.ErrorDescription,V.Ambient.GABVersion,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+	f.Intrinsic.Control.CallSub(UnLoad)
+	F.Intrinsic.Control.End
+
+F.Intrinsic.Control.EndTry
+Program.Sub.chkPerBatch_Click.End
+
+Program.Sub.chkAll_Click.Start
+F.Intrinsic.Control.Try
+V.Local.sError.Declare
+F.Intrinsic.Control.BlockEvents
+	f.Intrinsic.Control.If(v.Screen.F_CompPagos_Dash!chkAll.Value,=,1)
+		gui.F_CompPagos_Dash.chkPerBatch.Value(0)
+		gui.F_CompPagos_Dash.txtBatch.Visible(False)
+	F.Intrinsic.Control.Else
+		gui.F_CompPagos_Dash.txtBatch.Visible(True)
+		gui.F_CompPagos_Dash.chkPerBatch.Value(1)
+	f.Intrinsic.Control.EndIf
+
+F.Intrinsic.Control.UnBlockEvents
+F.Intrinsic.Control.Catch
+	F.Intrinsic.String.Build("Project: {0}{1}{1}Subroutine: {2}{1}Error Occurred {3} with description {4}{1}{1}GAB Version: {5}",V.Ambient.ScriptPath,V.Ambient.Newline,V.Ambient.CurrentSubroutine,V.Ambient.ErrorNumber,V.Ambient.ErrorDescription,V.Ambient.GABVersion,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+	f.Intrinsic.Control.CallSub(UnLoad)
+	F.Intrinsic.Control.End
+
+F.Intrinsic.Control.EndTry
+Program.Sub.chkAll_Click.End
+
+Program.Sub.tabGrid_Click.Start
+F.Intrinsic.Control.Try
+V.Local.sError.Declare
+	
+'	
+'	F.Intrinsic.Control.SelectCase(V.Screen.F_CompPagos_Dash!tabGridDocRel.Tab)
+'		F.Intrinsic.Control.Case(0)			'Tab Doc Rel
+'			gui.F_CompPagos_Dash.chkAll.Visible(True)
+'			gui.F_CompPagos_Dash.chkPerBatch.Visible(True)
+'		F.Intrinsic.Control.Case(1)			'Tab Errores
+'			gui.F_CompPagos_Dash.chkAll.Visible(False)
+'			gui.F_CompPagos_Dash.chkPerBatch.Visible(False)
+'			gui.F_CompPagos_Dash.txtBatch.Visible(False)
+'	F.Intrinsic.Control.EndSelect	
+
+
+
+F.Intrinsic.Control.Catch
+	F.Intrinsic.String.Build("Project: {0}{1}{1}Subroutine: {2}{1}Error Occurred {3} with description {4}{1}{1}GAB Version: {5}",V.Ambient.ScriptPath,V.Ambient.Newline,V.Ambient.CurrentSubroutine,V.Ambient.ErrorNumber,V.Ambient.ErrorDescription,V.Ambient.GABVersion,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+	f.Intrinsic.Control.CallSub(UnLoad)
+	F.Intrinsic.Control.End
+
+F.Intrinsic.Control.EndTry
+
+Program.Sub.tabGrid_Click.End
+
+Program.Sub.tabGridPagos_Click.Start
+F.Intrinsic.Control.Try
+V.Local.sError.Declare
+'	
+'	
+'	F.Intrinsic.Control.SelectCase(V.Screen.F_CompPagos_Dash!tabGridPagos.Tab)
+'		F.Intrinsic.Control.Case(0)			'Pagos
+'			gui.F_CompPagos_Dash.chkAll.Visible(True)
+'			gui.F_CompPagos_Dash.chkPerBatch.Visible(True)
+'	F.Intrinsic.Control.EndSelect	
+
+
+
+F.Intrinsic.Control.Catch
+	F.Intrinsic.String.Build("Project: {0}{1}{1}Subroutine: {2}{1}Error Occurred {3} with description {4}{1}{1}GAB Version: {5}",V.Ambient.ScriptPath,V.Ambient.Newline,V.Ambient.CurrentSubroutine,V.Ambient.ErrorNumber,V.Ambient.ErrorDescription,V.Ambient.GABVersion,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+	f.Intrinsic.Control.CallSub(UnLoad)
+	F.Intrinsic.Control.End
+
+F.Intrinsic.Control.EndTry
+
+Program.Sub.tabGridPagos_Click.End
+
+Program.Sub.txtBatch_Click.Start
+F.Intrinsic.Control.Try
+V.Local.sError.Declare
+
+	v.Local.sRet.Declare(string)
+	v.Local.sTitles.Declare(string)
+	v.Local.iWidths.Declare(long)
+	'FROM A CUSTOM BROWSER GET THE BATCH INFORMATION FROM CFDI_COMPAGOS_PAGO 
+	F.Intrinsic.String.Split("BATCH*!*DESCRIPCION*!*MONTO","*!*",v.local.sTitles)
+	F.Intrinsic.String.Split("200*!*800*!*800","*!*",v.local.iWidths)
+	F.Intrinsic.UI.SetBrowserHotTypeAhead(True)
+	F.Intrinsic.UI.Browser("Selecciona ID PAGOS","CON","select ID_PAGOS,FECHAPAGO,MONTO from CFDI_COMPAGOS_PAGO ORDER BY ID_PAGOS DESC",v.Local.sTitles,v.Local.iWidths,v.Local.sRet)
+	F.Intrinsic.Control.If(v.Local.sRet,"=","***CANCEL***")
+	 F.Intrinsic.Control.Else
+	 F.Intrinsic.String.Split(v.Local.sRet,"*!*",v.Local.sRet)
+	 	GUI.F_CompPagos_Dash.txtBatch.Text(V.Local.sRet(0).Trim)
+	F.Intrinsic.Control.EndIf
+
+
+F.Intrinsic.Control.Catch
+	F.Intrinsic.String.Build("Project: {0}{1}{1}Subroutine: {2}{1}Error Occurred {3} with description {4}{1}{1}GAB Version: {5}",V.Ambient.ScriptPath,V.Ambient.Newline,V.Ambient.CurrentSubroutine,V.Ambient.ErrorNumber,V.Ambient.ErrorDescription,V.Ambient.GABVersion,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+	f.Intrinsic.Control.CallSub(UnLoad)
+	F.Intrinsic.Control.End
+F.Intrinsic.Control.EndTry
+
+Program.Sub.txtBatch_Click.End
+
+'''''''''''''DOC REL TAB'''''''''''
+Program.Sub.DocRelLoad.Start
+F.Intrinsic.Control.Try
+V.Local.sError.Declare
+F.Intrinsic.Control.BlockEvents
+	GUI.F_CompPagos_Dash.lblStatus.Visible(True)
+	
+	GUI.F_CompPagos_Dash.pbStatus.Value(0)
+	GUI.F_CompPagos_Dash.pbStatus.Visible(True)
+	
+
+	'Load DataTable & DataView
+	F.Intrinsic.Control.CallSub(DocRelTab)
+	
+	
+	GUI.F_CompPagos_Dash.lblStatus.Visible(False)
+	GUI.F_CompPagos_Dash.pbStatus.Visible(False)
+
+F.Intrinsic.Control.UnBlockEvents
+	F.Intrinsic.Control.Catch
+	F.Intrinsic.String.Build("Project: {0}{1}{1}Subroutine: {2}{1}Error Occurred {3} with description {4}{1}{1}GAB Version: {5}",V.Ambient.ScriptPath,V.Ambient.Newline,V.Ambient.CurrentSubroutine,V.Ambient.ErrorNumber,V.Ambient.ErrorDescription,V.Ambient.GABVersion,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+	f.Intrinsic.Control.CallSub(UnLoad)
+	F.Intrinsic.Control.End
+F.Intrinsic.Control.EndTry
+Program.Sub.DocRelLoad.End
+
+Program.Sub.DocRelTab.Start
+F.Intrinsic.Control.Try
+	V.Local.sError.Declare
+	v.Local.sSQL.Declare
+	v.Local.sQuery.Declare
+	V.Local.sIDPagos.Declare
+
+	
+	GUI.F_CompPagos_Dash.lblStatus.Caption("Cargando Documentos Relacionados ....")
+	
+
+	'Create Data Table
+	F.Intrinsic.Control.If(V.DataTable.DocRel_DT.Exists)
+		F.data.datatable.close("DocRel_DT")
+	F.Intrinsic.Control.EndIf
+	
+	v.Local.sQuery.Set("SELECT * FROM CFDI_COMPAGOS_DOCREL")
+	
+	F.Intrinsic.Control.If(V.Screen.F_CompPagos_Dash!chkPerBatch.Value,=,1)
+		v.Local.sIDPagos.Set(V.Screen.F_CompPagos_Dash!txtBatch.Text)
+		F.Intrinsic.String.Build("{0} WHERE ID_PAGOS = '{1}'",V.Local.sQuery,v.Local.sIDPagos,v.Local.sQuery)
+	F.Intrinsic.Control.EndIf
+	
+	
+	F.Intrinsic.String.Build("{0} ORDER BY ID_PAGOS DESC",V.Local.sQuery,v.Local.sQuery)
+	
+	F.Data.DataTable.CreateFromSQL("DocRel_DT","con",v.Local.sQuery,True)
+
+	
+	GUI.F_CompPagos_Dash.GsGridDocRel.AddGridviewFromDatatable("DocRel_GV","DocRel_DT")
+	GUI.F_CompPagos_Dash.GsGridDocRel.SuspendLayout()
+	GUI.F_CompPagos_Dash.GsGridDocRel.SetGridViewProperty("DocRel_GV","MultiSelect",True)
+	GUI.F_CompPagos_Dash.GsGridDocRel.SetGridViewProperty("DocRel_GV","AllowSort",True)
+	GUI.F_CompPagos_Dash.GsGridDocRel.SetGridViewProperty("DocRel_GV","AllowFilter",True)
+	GUI.F_CompPagos_Dash.GsGridDocRel.SetGridViewProperty("DocRel_GV","OptionsDetailShowDetailTabs",False)
+	GUI.F_CompPagos_Dash.GsGridDocRel.SetGridViewProperty("DocRel_GV","OptionsViewShowFilterPanelMode",True)
+	GUI.F_CompPagos_Dash.GsGridDocRel.SetGridViewProperty("DocRel_GV","OptionsViewShowGroupPanel",True)
+	GUI.F_CompPagos_Dash.GsGridDocRel.SetGridViewProperty("DocRel_GV","OptionsViewColumnAutoWidth",False)
+	
+	GUI.F_CompPagos_Dash.GsGridDocRel.SetGridViewProperty("DocRel_GV","OptionsViewRowAutoHeight",True)
+	GUI.F_CompPagos_Dash.GsGridDocRel.SetGridViewProperty("DocRel_GV","ColumnPanelRowHeight",80)
+	
+	
+	'COLUMN PROPERTIES
+	GUI.F_CompPagos_Dash.GsGridDocRel.SetColumnProperty("DocRel_GV","ID_PAGOS","Caption","ID PAGOS")
+	GUI.F_CompPagos_Dash.GsGridDocRel.SetColumnProperty("DocRel_GV","IDDOCUMENTO","Caption","ID DOCUMENTO")
+	GUI.F_CompPagos_Dash.GsGridDocRel.SetColumnProperty("DocRel_GV","SERIE","Caption","SERIE")
+	GUI.F_CompPagos_Dash.GsGridDocRel.SetColumnProperty("DocRel_GV","FOLIO","Caption","FOLIO")
+	GUI.F_CompPagos_Dash.GsGridDocRel.SetColumnProperty("DocRel_GV","MONEDADR","Caption","MONEDA")
+	GUI.F_CompPagos_Dash.GsGridDocRel.SetColumnProperty("DocRel_GV","TIPOCAMBIODR","Caption","TIPO DE CAMBIO")
+	GUI.F_CompPagos_Dash.GsGridDocRel.SetColumnProperty("DocRel_GV","METODODEPAGODR","Caption","METODO DE PAGO")
+	GUI.F_CompPagos_Dash.GsGridDocRel.SetColumnProperty("DocRel_GV","NUMPARCIALIDAD","Caption","NUM. PARCIALIDAD")
+	GUI.F_CompPagos_Dash.GsGridDocRel.SetColumnProperty("DocRel_GV","IMPSALDOANT","Caption","SALDO ANTERIOR")
+	GUI.F_CompPagos_Dash.GsGridDocRel.SetColumnProperty("DocRel_GV","IMPPAGADO","Caption","IMPORTE PAGADO")
+	GUI.F_CompPagos_Dash.GsGridDocRel.SetColumnProperty("DocRel_GV","IMPSALDOINSOLUTO","Caption","SALDO INSOLUTO")
+	GUI.F_CompPagos_Dash.GsGridDocRel.SetColumnProperty("DocRel_GV","NO_FACTURA","Caption","NO. FACTURA")
+	GUI.F_CompPagos_Dash.GsGridDocRel.SetColumnProperty("DocRel_GV","BASEDR","Caption","BASE")
+	GUI.F_CompPagos_Dash.GsGridDocRel.SetColumnProperty("DocRel_GV","IMPORTEDR","Caption","IMPORTE")
+
+	GUI.F_CompPagos_Dash.GsGridDocRel.SetColumnProperty("DocRel_GV","TIPOFACTORDR","Visible",False)
+	GUI.F_CompPagos_Dash.GsGridDocRel.SetColumnProperty("DocRel_GV","TASAOCUOTADR","Visible",False)
+	GUI.F_CompPagos_Dash.GsGridDocRel.SetColumnProperty("DocRel_GV","EQUIVALENCIADR","Visible",False)
+	GUI.F_CompPagos_Dash.GsGridDocRel.SetColumnProperty("DocRel_GV","IMPUESTODR","Visible",False)
+	
+	GUI.F_CompPagos_Dash.GsGridDocRel.SetColumnProperty("DocRel_GV","ID_PAGOS","HeaderBackColor",V.Color.LtGreen)
+	GUI.F_CompPagos_Dash.GsGridDocRel.SetColumnProperty("DocRel_GV","IDDOCUMENTO","HeaderBackColor",V.Color.LtGreen)
+	GUI.F_CompPagos_Dash.GsGridDocRel.SetColumnProperty("DocRel_GV","SERIE","HeaderBackColor",V.Color.LtGreen)
+	GUI.F_CompPagos_Dash.GsGridDocRel.SetColumnProperty("DocRel_GV","FOLIO","HeaderBackColor",V.Color.LtGreen)
+	GUI.F_CompPagos_Dash.GsGridDocRel.SetColumnProperty("DocRel_GV","MONEDADR","HeaderBackColor",V.Color.LtGreen)
+	GUI.F_CompPagos_Dash.GsGridDocRel.SetColumnProperty("DocRel_GV","TIPOCAMBIODR","HeaderBackColor",V.Color.LtGreen)
+	GUI.F_CompPagos_Dash.GsGridDocRel.SetColumnProperty("DocRel_GV","METODODEPAGODR","HeaderBackColor",V.Color.LtGreen)
+	GUI.F_CompPagos_Dash.GsGridDocRel.SetColumnProperty("DocRel_GV","NUMPARCIALIDAD","HeaderBackColor",V.Color.LtGreen)
+	GUI.F_CompPagos_Dash.GsGridDocRel.SetColumnProperty("DocRel_GV","IMPSALDOANT","HeaderBackColor",V.Color.LtGreen)
+	GUI.F_CompPagos_Dash.GsGridDocRel.SetColumnProperty("DocRel_GV","IMPPAGADO","HeaderBackColor",V.Color.LtGreen)
+	GUI.F_CompPagos_Dash.GsGridDocRel.SetColumnProperty("DocRel_GV","IMPSALDOINSOLUTO","HeaderBackColor",V.Color.LtGreen)
+	GUI.F_CompPagos_Dash.GsGridDocRel.SetColumnProperty("DocRel_GV","NO_FACTURA","HeaderBackColor",V.Color.LtGreen)
+	GUI.F_CompPagos_Dash.GsGridDocRel.SetColumnProperty("DocRel_GV","BASEDR","HeaderBackColor",V.Color.LtGreen)
+	GUI.F_CompPagos_Dash.GsGridDocRel.SetColumnProperty("DocRel_GV","IMPORTEDR","HeaderBackColor",V.Color.LtGreen)
+	
+	GUI.F_CompPagos_Dash.GsGridDocRel.SetColumnProperty("DocRel_GV","ID_PAGOS","Width","100")
+	GUI.F_CompPagos_Dash.GsGridDocRel.SetColumnProperty("DocRel_GV","IDDOCUMENTO","Width","100")
+	GUI.F_CompPagos_Dash.GsGridDocRel.SetColumnProperty("DocRel_GV","SERIE","Width","60")
+	GUI.F_CompPagos_Dash.GsGridDocRel.SetColumnProperty("DocRel_GV","FOLIO","Width","60")
+	GUI.F_CompPagos_Dash.GsGridDocRel.SetColumnProperty("DocRel_GV","MONEDADR","Width","60")
+	GUI.F_CompPagos_Dash.GsGridDocRel.SetColumnProperty("DocRel_GV","TIPOCAMBIODR","Width","100")
+	GUI.F_CompPagos_Dash.GsGridDocRel.SetColumnProperty("DocRel_GV","METODODEPAGODR","Width","60")
+	GUI.F_CompPagos_Dash.GsGridDocRel.SetColumnProperty("DocRel_GV","NUMPARCIALIDAD","Width","60")
+	GUI.F_CompPagos_Dash.GsGridDocRel.SetColumnProperty("DocRel_GV","IMPSALDOANT","Width","100")
+	GUI.F_CompPagos_Dash.GsGridDocRel.SetColumnProperty("DocRel_GV","IMPPAGADO","Width","100")
+	GUI.F_CompPagos_Dash.GsGridDocRel.SetColumnProperty("DocRel_GV","IMPSALDOINSOLUTO","Width","100")
+	GUI.F_CompPagos_Dash.GsGridDocRel.SetColumnProperty("DocRel_GV","NO_FACTURA","Width","100")
+	GUI.F_CompPagos_Dash.GsGridDocRel.SetColumnProperty("DocRel_GV","BASEDR","Width","100")
+	GUI.F_CompPagos_Dash.GsGridDocRel.SetColumnProperty("DocRel_GV","IMPORTEDR","Width","100")
+	
+	GUI.F_CompPagos_Dash.GsGridDocRel.SetColumnProperty("DocRel_GV","ID_PAGOS","HeaderFontBold",True)
+	GUI.F_CompPagos_Dash.GsGridDocRel.SetColumnProperty("DocRel_GV","IDDOCUMENTO","HeaderFontBold",True)
+	GUI.F_CompPagos_Dash.GsGridDocRel.SetColumnProperty("DocRel_GV","SERIE","HeaderFontBold",True)
+	GUI.F_CompPagos_Dash.GsGridDocRel.SetColumnProperty("DocRel_GV","FOLIO","HeaderFontBold",True)
+	GUI.F_CompPagos_Dash.GsGridDocRel.SetColumnProperty("DocRel_GV","MONEDADR","HeaderFontBold",True)
+	GUI.F_CompPagos_Dash.GsGridDocRel.SetColumnProperty("DocRel_GV","TIPOCAMBIODR","HeaderFontBold",True)
+	GUI.F_CompPagos_Dash.GsGridDocRel.SetColumnProperty("DocRel_GV","METODODEPAGODR","HeaderFontBold",True)
+	GUI.F_CompPagos_Dash.GsGridDocRel.SetColumnProperty("DocRel_GV","NUMPARCIALIDAD","HeaderFontBold",True)
+	GUI.F_CompPagos_Dash.GsGridDocRel.SetColumnProperty("DocRel_GV","IMPSALDOANT","HeaderFontBold",True)
+	GUI.F_CompPagos_Dash.GsGridDocRel.SetColumnProperty("DocRel_GV","IMPPAGADO","HeaderFontBold",True)
+	GUI.F_CompPagos_Dash.GsGridDocRel.SetColumnProperty("DocRel_GV","IMPSALDOINSOLUTO","HeaderFontBold",True)
+	GUI.F_CompPagos_Dash.GsGridDocRel.SetColumnProperty("DocRel_GV","NO_FACTURA","HeaderFontBold",True)
+	GUI.F_CompPagos_Dash.GsGridDocRel.SetColumnProperty("DocRel_GV","BASEDR","HeaderFontBold",True)
+	GUI.F_CompPagos_Dash.GsGridDocRel.SetColumnProperty("DocRel_GV","IMPORTEDR","HeaderFontBold",True)
+	
+	GUI.F_CompPagos_Dash.GsGridDocRel.SetColumnProperty("DocRel_GV","ID_PAGOS","HeaderHAlignment","Center")
+	GUI.F_CompPagos_Dash.GsGridDocRel.SetColumnProperty("DocRel_GV","IDDOCUMENTO","HeaderHAlignment","Center")
+	GUI.F_CompPagos_Dash.GsGridDocRel.SetColumnProperty("DocRel_GV","SERIE","HeaderHAlignment","Center")
+	GUI.F_CompPagos_Dash.GsGridDocRel.SetColumnProperty("DocRel_GV","FOLIO","HeaderHAlignment","Center")
+	GUI.F_CompPagos_Dash.GsGridDocRel.SetColumnProperty("DocRel_GV","MONEDADR","HeaderHAlignment","Center")
+	GUI.F_CompPagos_Dash.GsGridDocRel.SetColumnProperty("DocRel_GV","TIPOCAMBIODR","HeaderHAlignment","Center")
+	GUI.F_CompPagos_Dash.GsGridDocRel.SetColumnProperty("DocRel_GV","METODODEPAGODR","HeaderHAlignment","Center")
+	GUI.F_CompPagos_Dash.GsGridDocRel.SetColumnProperty("DocRel_GV","NUMPARCIALIDAD","HeaderHAlignment","Center")
+	GUI.F_CompPagos_Dash.GsGridDocRel.SetColumnProperty("DocRel_GV","IMPSALDOANT","HeaderHAlignment","Center")
+	GUI.F_CompPagos_Dash.GsGridDocRel.SetColumnProperty("DocRel_GV","IMPPAGADO","HeaderHAlignment","Center")
+	GUI.F_CompPagos_Dash.GsGridDocRel.SetColumnProperty("DocRel_GV","IMPSALDOINSOLUTO","HeaderHAlignment","Center")
+	GUI.F_CompPagos_Dash.GsGridDocRel.SetColumnProperty("DocRel_GV","NO_FACTURA","HeaderHAlignment","Center")
+	GUI.F_CompPagos_Dash.GsGridDocRel.SetColumnProperty("DocRel_GV","BASEDR","HeaderHAlignment","Center")
+	GUI.F_CompPagos_Dash.GsGridDocRel.SetColumnProperty("DocRel_GV","IMPORTEDR","HeaderHAlignment","Center")
+	
+	GUI.F_CompPagos_Dash.GsGridDocRel.SetColumnProperty("DocRel_GV","ID_PAGOS","CellHAlignment","Center")
+	GUI.F_CompPagos_Dash.GsGridDocRel.SetColumnProperty("DocRel_GV","IDDOCUMENTO","CellHAlignment","Center")
+	GUI.F_CompPagos_Dash.GsGridDocRel.SetColumnProperty("DocRel_GV","SERIE","CellHAlignment","Center")
+	GUI.F_CompPagos_Dash.GsGridDocRel.SetColumnProperty("DocRel_GV","FOLIO","CellHAlignment","Center")
+	GUI.F_CompPagos_Dash.GsGridDocRel.SetColumnProperty("DocRel_GV","MONEDADR","CellHAlignment","Center")
+	GUI.F_CompPagos_Dash.GsGridDocRel.SetColumnProperty("DocRel_GV","TIPOCAMBIODR","CellHAlignment","Center")
+	GUI.F_CompPagos_Dash.GsGridDocRel.SetColumnProperty("DocRel_GV","METODODEPAGODR","CellHAlignment","Center")
+	GUI.F_CompPagos_Dash.GsGridDocRel.SetColumnProperty("DocRel_GV","NUMPARCIALIDAD","CellHAlignment","Center")
+	GUI.F_CompPagos_Dash.GsGridDocRel.SetColumnProperty("DocRel_GV","IMPSALDOANT","CellHAlignment","Center")
+	GUI.F_CompPagos_Dash.GsGridDocRel.SetColumnProperty("DocRel_GV","IMPPAGADO","CellHAlignment","Center")
+	GUI.F_CompPagos_Dash.GsGridDocRel.SetColumnProperty("DocRel_GV","IMPSALDOINSOLUTO","CellHAlignment","Center")
+	GUI.F_CompPagos_Dash.GsGridDocRel.SetColumnProperty("DocRel_GV","NO_FACTURA","CellHAlignment","Center")
+	GUI.F_CompPagos_Dash.GsGridDocRel.SetColumnProperty("DocRel_GV","BASEDR","CellHAlignment","Center")
+	GUI.F_CompPagos_Dash.GsGridDocRel.SetColumnProperty("DocRel_GV","IMPORTEDR","CellHAlignment","Center")
+	
+	GUI.F_CompPagos_Dash.GsGridDocRel.SetColumnProperty("DocRel_GV","ID_PAGOS","HeaderWordWrap","Wrap")
+	GUI.F_CompPagos_Dash.GsGridDocRel.SetColumnProperty("DocRel_GV","IDDOCUMENTO","HeaderWordWrap","Wrap")
+	GUI.F_CompPagos_Dash.GsGridDocRel.SetColumnProperty("DocRel_GV","SERIE","HeaderWordWrap","Wrap")
+	GUI.F_CompPagos_Dash.GsGridDocRel.SetColumnProperty("DocRel_GV","FOLIO","HeaderWordWrap","Wrap")
+	GUI.F_CompPagos_Dash.GsGridDocRel.SetColumnProperty("DocRel_GV","MONEDADR","HeaderWordWrap","Wrap")
+	GUI.F_CompPagos_Dash.GsGridDocRel.SetColumnProperty("DocRel_GV","TIPOCAMBIODR","HeaderWordWrap","Wrap")
+	GUI.F_CompPagos_Dash.GsGridDocRel.SetColumnProperty("DocRel_GV","METODODEPAGODR","HeaderWordWrap","Wrap")
+	GUI.F_CompPagos_Dash.GsGridDocRel.SetColumnProperty("DocRel_GV","NUMPARCIALIDAD","HeaderWordWrap","Wrap")
+	GUI.F_CompPagos_Dash.GsGridDocRel.SetColumnProperty("DocRel_GV","IMPSALDOANT","HeaderWordWrap","Wrap")
+	GUI.F_CompPagos_Dash.GsGridDocRel.SetColumnProperty("DocRel_GV","IMPPAGADO","HeaderWordWrap","Wrap")
+	GUI.F_CompPagos_Dash.GsGridDocRel.SetColumnProperty("DocRel_GV","IMPSALDOINSOLUTO","HeaderWordWrap","Wrap")	
+	GUI.F_CompPagos_Dash.GsGridDocRel.SetColumnProperty("DocRel_GV","NO_FACTURA","HeaderWordWrap","Wrap")
+	GUI.F_CompPagos_Dash.GsGridDocRel.SetColumnProperty("DocRel_GV","BASEDR","HeaderWordWrap","Wrap")
+	GUI.F_CompPagos_Dash.GsGridDocRel.SetColumnProperty("DocRel_GV","IMPORTEDR","HeaderWordWrap","Wrap")
+	
+	GUI.F_CompPagos_Dash.GsGridDocRel.SetColumnProperty("DocRel_GV","IMPSALDOANT","DisplayCustomNumeric","#,###,##0.00")
+	GUI.F_CompPagos_Dash.GsGridDocRel.SetColumnProperty("DocRel_GV","IMPPAGADO","DisplayCustomNumeric","#,###,##0.00")
+	GUI.F_CompPagos_Dash.GsGridDocRel.SetColumnProperty("DocRel_GV","IMPSALDOINSOLUTO","DisplayCustomNumeric","#,###,##0.00")
+	GUI.F_CompPagos_Dash.GsGridDocRel.SetColumnProperty("DocRel_GV","BASEDR","DisplayCustomNumeric","#,###,##0.00")
+	GUI.F_CompPagos_Dash.GsGridDocRel.SetColumnProperty("DocRel_GV","IMPORTEDR","DisplayCustomNumeric","#,###,##0.00")	
+	
+	GUI.F_CompPagos_Dash.GsGridDocRel.AddSummaryItem("DocRel_GV","IMPPAGADO","IMPPAGADO","Sum","","","n")
+	GUI.F_CompPagos_Dash.GsGridDocRel.AddSummaryItem("DocRel_GV","BASEDR","BASEDR","Sum","","","n")
+	GUI.F_CompPagos_Dash.GsGridDocRel.AddSummaryItem("DocRel_GV","IMPORTEDR","IMPORTEDR","Sum","","","n")
+	
+	GUI.F_CompPagos_Dash.GsGridDocRel.ResumeLayout()
+	GUI.F_CompPagos_Dash.GsGridDocRel.MainView("DocRel_GV")
+	
+
+
+F.Intrinsic.Control.Catch
+	F.Intrinsic.String.Build("Project: {0}{1}{1}Subroutine: {2}{1}Error Occurred {3} with description {4}{1}{1}GAB Version: {5}",V.Ambient.ScriptPath,V.Ambient.Newline,V.Ambient.CurrentSubroutine,V.Ambient.ErrorNumber,V.Ambient.ErrorDescription,V.Ambient.GABVersion,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+	f.Intrinsic.Control.CallSub(UnLoad)
+	F.Intrinsic.Control.End
+F.Intrinsic.Control.EndTry
+Program.Sub.DocRelTab.End
+
+Program.Sub.GsGridDocRel_CellValueChanged.Start
+Program.Sub.GsGridDocRel_CellValueChanged.End
+
+Program.Sub.GsGridDocRel_RowCellClick.Start
+Program.Sub.GsGridDocRel_RowCellClick.End
+
+'''''''''''''PAGO TAB'''''''''''
+Program.Sub.PagoLoad.Start
+F.Intrinsic.Control.Try
+V.Local.sError.Declare
+
+
+	GUI.F_CompPagos_Dash.lblStatus.Visible(True)
+	
+	GUI.F_CompPagos_Dash.pbStatus.Value(0)
+	GUI.F_CompPagos_Dash.pbStatus.Visible(True)
+	
+
+	'Load DataTable & DataView
+	F.Intrinsic.Control.CallSub(PagoTab)
+	
+	
+	GUI.F_CompPagos_Dash.lblStatus.Visible(False)
+	GUI.F_CompPagos_Dash.pbStatus.Visible(False)
+
+F.Intrinsic.Control.Catch
+	F.Intrinsic.String.Build("Project: {0}{1}{1}Subroutine: {2}{1}Error Occurred {3} with description {4}{1}{1}GAB Version: {5}",V.Ambient.ScriptPath,V.Ambient.Newline,V.Ambient.CurrentSubroutine,V.Ambient.ErrorNumber,V.Ambient.ErrorDescription,V.Ambient.GABVersion,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+	f.Intrinsic.Control.CallSub(UnLoad)
+	F.Intrinsic.Control.End
+F.Intrinsic.Control.EndTry
+Program.Sub.PagoLoad.End
+
+Program.Sub.PagoTab.Start
+F.Intrinsic.Control.Try
+V.Local.sError.Declare
+
+	v.Local.sQuery.Declare
+	V.Local.sIDPagos.Declare
+
+	
+	GUI.F_CompPagos_Dash.lblStatus.Caption("Cargando Pagos ....")
+	
+		
+	'Create Data Table
+	F.Intrinsic.Control.If(V.DataTable.Pago_DT.Exists)
+		F.data.datatable.close("Pago_DT")
+	F.Intrinsic.Control.EndIf
+	
+	v.Local.sQuery.Set("SELECT * FROM CFDI_COMPAGOS_PAGO ")
+	
+	F.Intrinsic.Control.If(V.Screen.F_CompPagos_Dash!chkPerBatch.Value,=,1)
+		v.Local.sIDPagos.Set(V.Screen.F_CompPagos_Dash!txtBatch.Text)
+		F.Intrinsic.String.Build("{0} WHERE ID_PAGOS = '{1}'",V.Local.sQuery,v.Local.sIDPagos,v.Local.sQuery)
+	F.Intrinsic.Control.EndIf
+	
+	F.Intrinsic.String.Build("{0} ORDER BY ID_PAGOS DESC",V.Local.sQuery,v.Local.sQuery)
+	F.Data.DataTable.CreateFromSQL("Pago_DT","con",v.Local.sQuery,True)
+
+	
+	GUI.F_CompPagos_Dash.GsGridPago.AddGridviewFromDatatable("Pago_GV","Pago_DT")
+	GUI.F_CompPagos_Dash.GsGridPago.SuspendLayout()
+	GUI.F_CompPagos_Dash.GsGridPago.SetGridViewProperty("Pago_GV","MultiSelect",True)
+	GUI.F_CompPagos_Dash.GsGridPago.SetGridViewProperty("Pago_GV","AllowSort",True)
+	GUI.F_CompPagos_Dash.GsGridPago.SetGridViewProperty("Pago_GV","AllowFilter",True)
+	GUI.F_CompPagos_Dash.GsGridPago.SetGridViewProperty("Pago_GV","OptionsDetailShowDetailTabs",False)
+	GUI.F_CompPagos_Dash.GsGridPago.SetGridViewProperty("Pago_GV","OptionsViewShowFilterPanelMode",True)
+	GUI.F_CompPagos_Dash.GsGridPago.SetGridViewProperty("Pago_GV","OptionsViewShowGroupPanel",True)
+	GUI.F_CompPagos_Dash.GsGridPago.SetGridViewProperty("Pago_GV","OptionsViewColumnAutoWidth",False)
+	
+	GUI.F_CompPagos_Dash.GsGridPago.SetGridViewProperty("Pago_GV","OptionsViewRowAutoHeight",True)
+	GUI.F_CompPagos_Dash.GsGridPago.SetGridViewProperty("Pago_GV","ColumnPanelRowHeight",80)
+	
+	'HIDE COLUMN
+	GUI.F_CompPagos_Dash.GsGridPago.SetColumnProperty("Pago_GV", "RFCEMISORCTAORD","Visible",False)
+	GUI.F_CompPagos_Dash.GsGridPago.SetColumnProperty("Pago_GV", "NOMBANCOORDEXT","Visible",False)
+	GUI.F_CompPagos_Dash.GsGridPago.SetColumnProperty("Pago_GV", "CTAORDENANTE","Visible",False)
+	GUI.F_CompPagos_Dash.GsGridPago.SetColumnProperty("Pago_GV", "RFCEMISORCTABEN","Visible",False)
+	GUI.F_CompPagos_Dash.GsGridPago.SetColumnProperty("Pago_GV", "CTEBENEFICIARIO","Visible",False)
+	GUI.F_CompPagos_Dash.GsGridPago.SetColumnProperty("Pago_GV", "CADPAGO","Visible",False)
+	GUI.F_CompPagos_Dash.GsGridPago.SetColumnProperty("Pago_GV", "INTERNACIONAL","Visible",False)
+	GUI.F_CompPagos_Dash.GsGridPago.SetColumnProperty("Pago_GV", "CADPAGO","Visible",False)
+	GUI.F_CompPagos_Dash.GsGridPago.SetColumnProperty("Pago_GV", "PDF_URL", "Visible",False)
+	GUI.F_CompPagos_Dash.GsGridPago.SetColumnProperty("Pago_GV", "TIPOFACTORP", "Visible",False)
+	GUI.F_CompPagos_Dash.GsGridPago.SetColumnProperty("Pago_GV", "TASAOCUOTAP", "Visible",False)
+	GUI.F_CompPagos_Dash.GsGridPago.SetColumnProperty("Pago_GV","IMPUESTOP","Visible",False)
+	
+	GUI.F_CompPagos_Dash.GsGridPago.SetColumnProperty("Pago_GV", "ID_PAGOS", "Caption", "ID PAGOS")
+	GUI.F_CompPagos_Dash.GsGridPago.SetColumnProperty("Pago_GV", "FECHAPAGO", "Caption", "FECHA DE PAGO")
+	GUI.F_CompPagos_Dash.GsGridPago.SetColumnProperty("Pago_GV", "FORMADEPAGOP", "Caption", "FORMA DE PAGO")
+	GUI.F_CompPagos_Dash.GsGridPago.SetColumnProperty("Pago_GV", "MONEDAP", "Caption", "MONEDA")
+	GUI.F_CompPagos_Dash.GsGridPago.SetColumnProperty("Pago_GV", "TIPOCAMBIOP", "Caption", "TIPO DE CAMBIO")
+	GUI.F_CompPagos_Dash.GsGridPago.SetColumnProperty("Pago_GV", "MONTO", "Caption", "MONTO")
+	GUI.F_CompPagos_Dash.GsGridPago.SetColumnProperty("Pago_GV", "NUMOPERACION", "Caption", "NUM DE OPERACION")
+	GUI.F_CompPagos_Dash.GsGridPago.SetColumnProperty("Pago_GV", "TIMBRAR", "Caption", "TIMBRADO")
+	GUI.F_CompPagos_Dash.GsGridPago.SetColumnProperty("Pago_GV", "XML_URL", "Caption", "UBICACION DEL XML")
+	GUI.F_CompPagos_Dash.GsGridPago.SetColumnProperty("Pago_GV", "UUID", "Caption", "UUID")
+	GUI.F_CompPagos_Dash.GsGridPago.SetColumnProperty("Pago_GV", "BASEP", "Caption", "BASE")
+	GUI.F_CompPagos_Dash.GsGridPago.SetColumnProperty("Pago_GV", "IMPORTEP", "Caption", "IMPORTE")
+	
+	GUI.F_CompPagos_Dash.GsGridPago.SetColumnProperty("Pago_GV", "XML_URL",  "ReadOnly", True)
+
+	GUI.F_CompPagos_Dash.GsGridPago.SetColumnProperty("Pago_GV", "ID_PAGOS", "HeaderBackColor",V.Color.LtGreen)
+	GUI.F_CompPagos_Dash.GsGridPago.SetColumnProperty("Pago_GV", "FECHAPAGO", "HeaderBackColor",V.Color.LtGreen)
+	GUI.F_CompPagos_Dash.GsGridPago.SetColumnProperty("Pago_GV", "FORMADEPAGOP", "HeaderBackColor",V.Color.LtGreen)
+	GUI.F_CompPagos_Dash.GsGridPago.SetColumnProperty("Pago_GV", "MONEDAP", "HeaderBackColor",V.Color.LtGreen)
+	GUI.F_CompPagos_Dash.GsGridPago.SetColumnProperty("Pago_GV", "TIPOCAMBIOP", "HeaderBackColor",V.Color.LtGreen)
+	GUI.F_CompPagos_Dash.GsGridPago.SetColumnProperty("Pago_GV", "MONTO", "HeaderBackColor",V.Color.LtGreen)
+	GUI.F_CompPagos_Dash.GsGridPago.SetColumnProperty("Pago_GV", "NUMOPERACION", "HeaderBackColor",V.Color.LtGreen)
+	GUI.F_CompPagos_Dash.GsGridPago.SetColumnProperty("Pago_GV", "TIMBRAR", "HeaderBackColor",V.Color.LtGreen)
+	GUI.F_CompPagos_Dash.GsGridPago.SetColumnProperty("Pago_GV", "XML_URL", "HeaderBackColor",V.Color.LtGreen)
+	GUI.F_CompPagos_Dash.GsGridPago.SetColumnProperty("Pago_GV", "UUID","HeaderBackColor",V.Color.LtGreen)
+	GUI.F_CompPagos_Dash.GsGridPago.SetColumnProperty("Pago_GV", "BASEP", "HeaderBackColor",V.Color.LtGreen)
+	GUI.F_CompPagos_Dash.GsGridPago.SetColumnProperty("Pago_GV", "IMPORTEP", "HeaderBackColor",V.Color.LtGreen)
+	
+
+	GUI.F_CompPagos_Dash.GsGridPago.SetColumnProperty("Pago_GV", "ID_PAGOS", "Width","100")
+	GUI.F_CompPagos_Dash.GsGridPago.SetColumnProperty("Pago_GV", "FECHAPAGO", "Width","80")
+	GUI.F_CompPagos_Dash.GsGridPago.SetColumnProperty("Pago_GV", "FORMADEPAGOP", "Width","60")
+	GUI.F_CompPagos_Dash.GsGridPago.SetColumnProperty("Pago_GV", "MONEDAP", "Width","60")
+	GUI.F_CompPagos_Dash.GsGridPago.SetColumnProperty("Pago_GV", "TIPOCAMBIOP", "Width","100")
+	GUI.F_CompPagos_Dash.GsGridPago.SetColumnProperty("Pago_GV", "MONTO", "Width","100")
+	GUI.F_CompPagos_Dash.GsGridPago.SetColumnProperty("Pago_GV", "NUMOPERACION", "Width","100")
+	GUI.F_CompPagos_Dash.GsGridPago.SetColumnProperty("Pago_GV", "TIMBRAR", "Width","60")
+	GUI.F_CompPagos_Dash.GsGridPago.SetColumnProperty("Pago_GV", "XML_URL", "Width","200")
+	GUI.F_CompPagos_Dash.GsGridPago.SetColumnProperty("Pago_GV", "UUID", "Width","200")
+	GUI.F_CompPagos_Dash.GsGridPago.SetColumnProperty("Pago_GV", "BASEP", "Width","100")
+	GUI.F_CompPagos_Dash.GsGridPago.SetColumnProperty("Pago_GV", "IMPORTEP", "Width","100")
+	
+	GUI.F_CompPagos_Dash.GsGridPago.SetColumnProperty("Pago_GV", "ID_PAGOS", "HeaderFontBold",True)
+	GUI.F_CompPagos_Dash.GsGridPago.SetColumnProperty("Pago_GV", "FECHAPAGO", "HeaderFontBold",True)
+	GUI.F_CompPagos_Dash.GsGridPago.SetColumnProperty("Pago_GV", "FORMADEPAGOP", "HeaderFontBold",True)
+	GUI.F_CompPagos_Dash.GsGridPago.SetColumnProperty("Pago_GV", "MONEDAP", "HeaderFontBold",True)
+	GUI.F_CompPagos_Dash.GsGridPago.SetColumnProperty("Pago_GV", "TIPOCAMBIOP", "HeaderFontBold",True)
+	GUI.F_CompPagos_Dash.GsGridPago.SetColumnProperty("Pago_GV", "MONTO", "HeaderFontBold",True)
+	GUI.F_CompPagos_Dash.GsGridPago.SetColumnProperty("Pago_GV", "NUMOPERACION", "HeaderFontBold",True)
+	GUI.F_CompPagos_Dash.GsGridPago.SetColumnProperty("Pago_GV", "TIMBRAR", "HeaderFontBold",True)
+	GUI.F_CompPagos_Dash.GsGridPago.SetColumnProperty("Pago_GV", "XML_URL", "HeaderFontBold",True)	
+	GUI.F_CompPagos_Dash.GsGridPago.SetColumnProperty("Pago_GV", "UUID", "HeaderFontBold",True)	
+	GUI.F_CompPagos_Dash.GsGridPago.SetColumnProperty("Pago_GV", "BASEP", "HeaderFontBold",True)	
+	GUI.F_CompPagos_Dash.GsGridPago.SetColumnProperty("Pago_GV", "IMPORTEP","HeaderFontBold",True)	
+
+	GUI.F_CompPagos_Dash.GsGridPago.SetColumnProperty("Pago_GV", "ID_PAGOS", "HeaderHAlignment","Center")
+	GUI.F_CompPagos_Dash.GsGridPago.SetColumnProperty("Pago_GV", "FECHAPAGO", "HeaderHAlignment","Center")
+	GUI.F_CompPagos_Dash.GsGridPago.SetColumnProperty("Pago_GV", "FORMADEPAGOP", "HeaderHAlignment","Center")
+	GUI.F_CompPagos_Dash.GsGridPago.SetColumnProperty("Pago_GV", "MONEDAP", "HeaderHAlignment","Center")
+	GUI.F_CompPagos_Dash.GsGridPago.SetColumnProperty("Pago_GV", "TIPOCAMBIOP", "HeaderHAlignment","Center")
+	GUI.F_CompPagos_Dash.GsGridPago.SetColumnProperty("Pago_GV", "MONTO", "HeaderHAlignment","Center")
+	GUI.F_CompPagos_Dash.GsGridPago.SetColumnProperty("Pago_GV", "NUMOPERACION", "HeaderHAlignment","Center")
+	GUI.F_CompPagos_Dash.GsGridPago.SetColumnProperty("Pago_GV", "TIMBRAR", "HeaderHAlignment","Center")
+	GUI.F_CompPagos_Dash.GsGridPago.SetColumnProperty("Pago_GV", "XML_URL", "HeaderHAlignment","Center")
+	GUI.F_CompPagos_Dash.GsGridPago.SetColumnProperty("Pago_GV", "UUID","HeaderHAlignment","Center")
+	GUI.F_CompPagos_Dash.GsGridPago.SetColumnProperty("Pago_GV", "BASEP", "HeaderHAlignment","Center")
+	GUI.F_CompPagos_Dash.GsGridPago.SetColumnProperty("Pago_GV", "IMPORTEP","HeaderHAlignment","Center")
+
+	GUI.F_CompPagos_Dash.GsGridPago.SetColumnProperty("Pago_GV", "ID_PAGOS", "CellHAlignment","Center")
+	GUI.F_CompPagos_Dash.GsGridPago.SetColumnProperty("Pago_GV", "FECHAPAGO", "CellHAlignment","Center")
+	GUI.F_CompPagos_Dash.GsGridPago.SetColumnProperty("Pago_GV", "FORMADEPAGOP", "CellHAlignment","Center")
+	GUI.F_CompPagos_Dash.GsGridPago.SetColumnProperty("Pago_GV", "MONEDAP", "CellHAlignment","Center")
+	GUI.F_CompPagos_Dash.GsGridPago.SetColumnProperty("Pago_GV", "TIPOCAMBIOP", "CellHAlignment","Center")
+	GUI.F_CompPagos_Dash.GsGridPago.SetColumnProperty("Pago_GV", "MONTO", "CellHAlignment","Center")
+	GUI.F_CompPagos_Dash.GsGridPago.SetColumnProperty("Pago_GV", "NUMOPERACION", "CellHAlignment","Center")
+	GUI.F_CompPagos_Dash.GsGridPago.SetColumnProperty("Pago_GV", "TIMBRAR", "CellHAlignment","Center")
+	GUI.F_CompPagos_Dash.GsGridPago.SetColumnProperty("Pago_GV", "XML_URL", "CellHAlignment","Center")
+	GUI.F_CompPagos_Dash.GsGridPago.SetColumnProperty("Pago_GV", "UUID","CellHAlignment","Center")
+	GUI.F_CompPagos_Dash.GsGridPago.SetColumnProperty("Pago_GV", "BASEP", "CellHAlignment","Center")
+	GUI.F_CompPagos_Dash.GsGridPago.SetColumnProperty("Pago_GV", "IMPORTEP","CellHAlignment","Center")
+
+
+	GUI.F_CompPagos_Dash.GsGridPago.SetColumnProperty("Pago_GV", "ID_PAGOS", "HeaderWordWrap","Wrap")
+	GUI.F_CompPagos_Dash.GsGridPago.SetColumnProperty("Pago_GV", "FECHAPAGO", "HeaderWordWrap","Wrap")
+	GUI.F_CompPagos_Dash.GsGridPago.SetColumnProperty("Pago_GV", "FORMADEPAGOP", "HeaderWordWrap","Wrap")
+	GUI.F_CompPagos_Dash.GsGridPago.SetColumnProperty("Pago_GV", "MONEDAP", "HeaderWordWrap","Wrap")
+	GUI.F_CompPagos_Dash.GsGridPago.SetColumnProperty("Pago_GV", "TIPOCAMBIOP", "HeaderWordWrap","Wrap")
+	GUI.F_CompPagos_Dash.GsGridPago.SetColumnProperty("Pago_GV", "MONTO", "HeaderWordWrap","Wrap")
+	GUI.F_CompPagos_Dash.GsGridPago.SetColumnProperty("Pago_GV", "NUMOPERACION", "HeaderWordWrap","Wrap")
+	GUI.F_CompPagos_Dash.GsGridPago.SetColumnProperty("Pago_GV", "TIMBRAR", "HeaderWordWrap","Wrap")
+	GUI.F_CompPagos_Dash.GsGridPago.SetColumnProperty("Pago_GV", "XML_URL", "HeaderWordWrap","Wrap")
+	GUI.F_CompPagos_Dash.GsGridPago.SetColumnProperty("Pago_GV", "UUID","HeaderWordWrap","Wrap")
+	GUI.F_CompPagos_Dash.GsGridPago.SetColumnProperty("Pago_GV", "BASEP", "HeaderWordWrap","Wrap")
+	GUI.F_CompPagos_Dash.GsGridPago.SetColumnProperty("Pago_GV", "IMPORTEP","HeaderWordWrap","Wrap")
+
+	GUI.F_CompPagos_Dash.GsGridPago.SetColumnProperty("Pago_GV", "TIMBRAR", "CellBackColor","LightYellow")
+	GUI.F_CompPagos_Dash.GsGridPago.SetColumnProperty("Pago_GV","MONTO","DisplayCustomNumeric","#,###,##0.00")
+	GUI.F_CompPagos_Dash.GsGridPago.SetColumnProperty("Pago_GV","BASEP","DisplayCustomNumeric","#,###,##0.00")
+	GUI.F_CompPagos_Dash.GsGridPago.SetColumnProperty("Pago_GV","IMPORTEP","DisplayCustomNumeric","#,###,##0.00")
+	'GUI.F_CompPagos_Dash.GsGridPago.SetColumnProperty("Pago_GV","MONTO","Qty_BO","Sum","","","n")
+
+
+	GUI.F_CompPagos_Dash.GsGridPago.ResumeLayout()
+	GUI.F_CompPagos_Dash.GsGridPago.MainView("Pago_GV")
+
+F.Intrinsic.Control.Catch
+	F.Intrinsic.String.Build("Project: {0}{1}{1}Subroutine: {2}{1}Error Occurred {3} with description {4}{1}{1}GAB Version: {5}",V.Ambient.ScriptPath,V.Ambient.Newline,V.Ambient.CurrentSubroutine,V.Ambient.ErrorNumber,V.Ambient.ErrorDescription,V.Ambient.GABVersion,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+	f.Intrinsic.Control.CallSub(UnLoad)
+	F.Intrinsic.Control.End
+F.Intrinsic.Control.EndTry
+Program.Sub.PagoTab.End
+
+Program.Sub.GsGridPago_CellValueChanged.Start
+Program.Sub.GsGridPago_CellValueChanged.End
+
+Program.Sub.GsGridPago_RowCellClick.Start
+V.Local.sFile.Declare
+V.Local.sRet.Declare
+V.Local.sSQL.Declare
+v.Local.sUNC.Declare
+v.Local.sFileXML.Declare
+v.Local.sFileURL.Declare
+
+'Function.Intrinsic.Debug.InvokeDebugger
+'Function.Intrinsic.Debug.Stop
+
+
+F.ODBC.Connection!con.ExecuteAndReturn("SELECT RTRIM(UNC_PATH) FROM GAB_5013_CFDI_URL",v.Local.sUNC)
+
+'F.Intrinsic.File.MakeFilenameFriendly(v.Local.sUNC,v.Local.sUNC)
+
+F.Intrinsic.Control.If(V.Args.Column,=,"XML_URL")
+	v.Local.sFile.Set(v.DataTable.Pago_DT(v.Args.RowIndex).XML_URL!FieldValTrim)
+	f.Intrinsic.String.Build("{0}{1}",v.Local.sUNC,v.Local.sFile,v.Local.sFileXML)
+	f.Intrinsic.Task.ShellExec(-1,"Open",v.Local.sFileXML,"*.xml|*.xml","",1)
+
+F.Intrinsic.Control.EndIf
+
+
+
+Program.Sub.GsGridPago_RowCellClick.End
+
+'''''''''''''ERRORES TAB'''''''''''
+Program.Sub.ErroresLoad.Start
+F.Intrinsic.Control.Try
+V.Local.sError.Declare
+
+	GUI.F_CompPagos_Dash.lblStatus.Visible(True)
+	
+	GUI.F_CompPagos_Dash.pbStatus.Value(0)
+	GUI.F_CompPagos_Dash.pbStatus.Visible(True)
+	
+
+	'Load DataTable & DataView
+	F.Intrinsic.Control.CallSub(ErroresTab)
+	
+	
+	GUI.F_CompPagos_Dash.lblStatus.Visible(False)
+	GUI.F_CompPagos_Dash.pbStatus.Visible(False)
+
+F.Intrinsic.Control.Catch
+	F.Intrinsic.String.Build("Project: {0}{1}{1}Subroutine: {2}{1}Error Occurred {3} with description {4}{1}{1}GAB Version: {5}",V.Ambient.ScriptPath,V.Ambient.Newline,V.Ambient.CurrentSubroutine,V.Ambient.ErrorNumber,V.Ambient.ErrorDescription,V.Ambient.GABVersion,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+	f.Intrinsic.Control.CallSub(UnLoad)
+	F.Intrinsic.Control.End
+F.Intrinsic.Control.EndTry
+Program.Sub.ErroresLoad.End
+
+Program.Sub.ErroresTab.Start
+F.Intrinsic.Control.Try
+V.Local.sError.Declare
+v.Local.sQuery.Declare
+V.Local.sIDPagos.Declare
+
+	
+	GUI.F_CompPagos_Dash.lblStatus.Caption("Cargando Errores de Pago ....")
+	
+		
+	'Create Data Table
+	F.Intrinsic.Control.If(V.DataTable.Errores_DT.Exists)
+		F.data.datatable.close("Errores_DT")
+	F.Intrinsic.Control.EndIf
+	
+	v.Local.sQuery.Set("SELECT * FROM GAB_5016_PAGOS5")
+	
+	F.Intrinsic.Control.If(V.Screen.F_CompPagos_Dash!chkPerBatch.Value,=,1)
+		v.Local.sIDPagos.Set(V.Screen.F_CompPagos_Dash!txtBatch.Text)
+		F.Intrinsic.String.Build("{0} WHERE ID_PAGOS = '{1}'",V.Local.sQuery,v.Local.sIDPagos,v.Local.sQuery)
+	F.Intrinsic.Control.EndIf
+	
+	F.Data.DataTable.CreateFromSQL("Errores_DT","con",v.Local.sQuery,True)
+
+	GUI.F_CompPagos_Dash.GsGridErrores.AddGridviewFromDatatable("Errores_GV","Errores_DT")
+	GUI.F_CompPagos_Dash.GsGridErrores.SuspendLayout()
+	GUI.F_CompPagos_Dash.GsGridErrores.SetGridViewProperty("Errores_GV","MultiSelect",True)
+	GUI.F_CompPagos_Dash.GsGridErrores.SetGridViewProperty("Errores_GV","AllowSort",True)
+	GUI.F_CompPagos_Dash.GsGridErrores.SetGridViewProperty("Errores_GV","AllowFilter",True)
+	GUI.F_CompPagos_Dash.GsGridErrores.SetGridViewProperty("Errores_GV","OptionsDetailShowDetailTabs",False)
+	GUI.F_CompPagos_Dash.GsGridErrores.SetGridViewProperty("Errores_GV","OptionsViewShowFilterPanelMode",True)
+	GUI.F_CompPagos_Dash.GsGridErrores.SetGridViewProperty("Errores_GV","OptionsViewShowGroupPanel",True)
+	GUI.F_CompPagos_Dash.GsGridErrores.SetGridViewProperty("Errores_GV","OptionsViewColumnAutoWidth",False)
+	
+	GUI.F_CompPagos_Dash.GsGridErrores.SetGridViewProperty("Errores_GV","OptionsViewRowAutoHeight",True)
+	GUI.F_CompPagos_Dash.GsGridErrores.SetGridViewProperty("Errores_GV","ColumnPanelRowHeight",80)
+	
+	GUI.F_CompPagos_Dash.GsGridErrores.SetColumnProperty("Errores_GV", "ID_PAGOS", "Caption", "ID PAGOS")
+	GUI.F_CompPagos_Dash.GsGridErrores.SetColumnProperty("Errores_GV", "DATE", "Caption", "FECHA DE TIMBRADO")
+	GUI.F_CompPagos_Dash.GsGridErrores.SetColumnProperty("Errores_GV", "LOCATION", "Caption", "UBICACION DE ERROR")
+	GUI.F_CompPagos_Dash.GsGridErrores.SetColumnProperty("Errores_GV", "MESSAGE", "Caption", "MENSAJE DE ERROR")
+	
+	GUI.F_CompPagos_Dash.GsGridErrores.SetColumnProperty("Errores_GV", "ID_PAGOS", "HeaderBackColor",V.Color.LtGreen)
+	GUI.F_CompPagos_Dash.GsGridErrores.SetColumnProperty("Errores_GV", "DATE", "HeaderBackColor",V.Color.LtGreen)
+	GUI.F_CompPagos_Dash.GsGridErrores.SetColumnProperty("Errores_GV", "LOCATION", "HeaderBackColor",V.Color.LtGreen)
+	GUI.F_CompPagos_Dash.GsGridErrores.SetColumnProperty("Errores_GV", "MESSAGE", "HeaderBackColor",V.Color.LtGreen)
+	
+	GUI.F_CompPagos_Dash.GsGridErrores.SetColumnProperty("Errores_GV", "ID_PAGOS", "Width","80")
+	GUI.F_CompPagos_Dash.GsGridErrores.SetColumnProperty("Errores_GV", "DATE", "Width","140")
+	GUI.F_CompPagos_Dash.GsGridErrores.SetColumnProperty("Errores_GV", "LOCATION", "Width","150")
+	GUI.F_CompPagos_Dash.GsGridErrores.SetColumnProperty("Errores_GV", "MESSAGE", "Width","800")
+	
+	GUI.F_CompPagos_Dash.GsGridErrores.SetColumnProperty("Errores_GV", "ID_PAGOS", "HeaderFontBold",True)
+	GUI.F_CompPagos_Dash.GsGridErrores.SetColumnProperty("Errores_GV", "DATE", "HeaderFontBold",True)
+	GUI.F_CompPagos_Dash.GsGridErrores.SetColumnProperty("Errores_GV", "LOCATION", "HeaderFontBold",True)
+	GUI.F_CompPagos_Dash.GsGridErrores.SetColumnProperty("Errores_GV", "MESSAGE", "HeaderFontBold",True)
+	
+	GUI.F_CompPagos_Dash.GsGridErrores.SetColumnProperty("Errores_GV", "ID_PAGOS","HeaderHAlignment","Center")
+	GUI.F_CompPagos_Dash.GsGridErrores.SetColumnProperty("Errores_GV", "DATE","HeaderHAlignment","Center")
+	GUI.F_CompPagos_Dash.GsGridErrores.SetColumnProperty("Errores_GV", "LOCATION","HeaderHAlignment","Center")
+	GUI.F_CompPagos_Dash.GsGridErrores.SetColumnProperty("Errores_GV", "MESSAGE","HeaderHAlignment","Center")
+	
+	GUI.F_CompPagos_Dash.GsGridErrores.SetColumnProperty("Errores_GV", "ID_PAGOS","CellHAlignment","Center")
+	GUI.F_CompPagos_Dash.GsGridErrores.SetColumnProperty("Errores_GV", "DATE","CellHAlignment","Center")
+	GUI.F_CompPagos_Dash.GsGridErrores.SetColumnProperty("Errores_GV", "LOCATION","CellHAlignment","Center")
+	GUI.F_CompPagos_Dash.GsGridErrores.SetColumnProperty("Errores_GV", "MESSAGE","CellHAlignment","Center")
+	
+	GUI.F_CompPagos_Dash.GsGridErrores.SetColumnProperty("Errores_GV", "ID_PAGOS","HeaderWordWrap","Wrap")
+	GUI.F_CompPagos_Dash.GsGridErrores.SetColumnProperty("Errores_GV", "DATE","HeaderWordWrap","Wrap")
+	GUI.F_CompPagos_Dash.GsGridErrores.SetColumnProperty("Errores_GV", "LOCATION","HeaderWordWrap","Wrap")
+	GUI.F_CompPagos_Dash.GsGridErrores.SetColumnProperty("Errores_GV", "MESSAGE","HeaderWordWrap","Wrap")
+	
+	GUI.F_CompPagos_Dash.GsGridErrores.SetColumnProperty("Errores_GV", "MESSAGE","CellBackColor","LightYellow")
+
+	GUI.F_CompPagos_Dash.GsGridErrores.ResumeLayout()
+	GUI.F_CompPagos_Dash.GsGridErrores.MainView("Errores_GV")
+
+
+F.Intrinsic.Control.Catch
+	F.Intrinsic.String.Build("Project: {0}{1}{1}Subroutine: {2}{1}Error Occurred {3} with description {4}{1}{1}GAB Version: {5}",V.Ambient.ScriptPath,V.Ambient.Newline,V.Ambient.CurrentSubroutine,V.Ambient.ErrorNumber,V.Ambient.ErrorDescription,V.Ambient.GABVersion,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+	f.Intrinsic.Control.CallSub(UnLoad)
+	F.Intrinsic.Control.End
+F.Intrinsic.Control.EndTry
+Program.Sub.ErroresTab.End
+
+'''''''''''''SALDOS TAB'''''''''''
+Program.Sub.SaldosLoad.Start
+F.Intrinsic.Control.Try
+V.Local.sError.Declare
+
+	GUI.F_CompPagos_Dash.lblStatus.Visible(True)
+	
+	GUI.F_CompPagos_Dash.pbStatus.Value(0)
+	GUI.F_CompPagos_Dash.pbStatus.Visible(True)
+	
+
+	'Load DataTable & DataView
+	F.Intrinsic.Control.CallSub(SaldosTab)
+	
+	
+	GUI.F_CompPagos_Dash.lblStatus.Visible(False)
+	GUI.F_CompPagos_Dash.pbStatus.Visible(False)
+
+F.Intrinsic.Control.Catch
+	F.Intrinsic.String.Build("Project: {0}{1}{1}Subroutine: {2}{1}Error Occurred {3} with description {4}{1}{1}GAB Version: {5}",V.Ambient.ScriptPath,V.Ambient.Newline,V.Ambient.CurrentSubroutine,V.Ambient.ErrorNumber,V.Ambient.ErrorDescription,V.Ambient.GABVersion,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+	f.Intrinsic.Control.CallSub(UnLoad)
+	F.Intrinsic.Control.End
+F.Intrinsic.Control.EndTry
+Program.Sub.SaldosLoad.End
+
+Program.Sub.SaldosTab.Start
+F.Intrinsic.Control.Try
+V.Local.sError.Declare
+v.Local.sQuery.Declare
+V.Local.sIDPagos.Declare
+
+
+	
+	GUI.F_CompPagos_Dash.lblStatus.Caption("Cargando Saldos por Factura ....")
+	
+		
+	'Create Data Table
+	F.Intrinsic.Control.If(V.DataTable.Saldos_DT.Exists)
+		F.data.datatable.close("Saldos_DT")
+	F.Intrinsic.Control.EndIf
+	
+	v.Local.sQuery.Set("SELECT * FROM GAB_5016_CFDI_PAGOS3")
+	
+	F.Data.DataTable.CreateFromSQL("Saldos_DT","con",v.Local.sQuery,True)
+
+	gui.F_CompPagos_Dash.GsGridSaldos.AddGridviewFromDatatable("Saldos_GV","Saldos_DT")
+	GUI.F_CompPagos_Dash.GsGridSaldos.SuspendLayout()
+	GUI.F_CompPagos_Dash.GsGridSaldos.SetGridViewProperty("Saldos_GV","MultiSelect",True)
+	GUI.F_CompPagos_Dash.GsGridSaldos.SetGridViewProperty("Saldos_GV","AllowSort",True)
+	GUI.F_CompPagos_Dash.GsGridSaldos.SetGridViewProperty("Saldos_GV","AllowFilter",True)
+	GUI.F_CompPagos_Dash.GsGridSaldos.SetGridViewProperty("Saldos_GV","OptionsDetailShowDetailTabs",False)
+	GUI.F_CompPagos_Dash.GsGridSaldos.SetGridViewProperty("Saldos_GV","OptionsViewShowFilterPanelMode",True)
+	GUI.F_CompPagos_Dash.GsGridSaldos.SetGridViewProperty("Saldos_GV","OptionsViewShowGroupPanel",True)
+	GUI.F_CompPagos_Dash.GsGridSaldos.SetGridViewProperty("Saldos_GV","OptionsViewColumnAutoWidth",False)
+	
+	GUI.F_CompPagos_Dash.GsGridSaldos.SetGridViewProperty("Saldos_GV","OptionsViewRowAutoHeight",True)
+	GUI.F_CompPagos_Dash.GsGridSaldos.SetGridViewProperty("Saldos_GV","ColumnPanelRowHeight",80)
+	
+	GUI.F_CompPagos_Dash.GsGridSaldos.SetColumnProperty("Saldos_GV", "INVOICE", "Caption", "ID PAGOS")
+	GUI.F_CompPagos_Dash.GsGridSaldos.SetColumnProperty("Saldos_GV", "NUMPARCIALIDAD", "Caption", "NUMERO DE PARCIALIDAD")
+	GUI.F_CompPagos_Dash.GsGridSaldos.SetColumnProperty("Saldos_GV", "IMPSALDOINSOLUTO", "Caption", "SALDO INSOLUTO")
+	'GUI.F_CompPagos_Dash.GsGridSaldos.SetColumnProperty("Saldos_GV", "MESSAGE", "Caption", "MENSAJE DE ERROR")
+	
+	GUI.F_CompPagos_Dash.GsGridSaldos.SetColumnProperty("Saldos_GV", "INVOICE", "HeaderBackColor",V.Color.LtGreen)
+	GUI.F_CompPagos_Dash.GsGridSaldos.SetColumnProperty("Saldos_GV", "NUMPARCIALIDAD", "HeaderBackColor",V.Color.LtGreen)
+	GUI.F_CompPagos_Dash.GsGridSaldos.SetColumnProperty("Saldos_GV", "IMPSALDOINSOLUTO", "HeaderBackColor",V.Color.LtGreen)
+	'GUI.F_CompPagos_Dash.GsGridSaldos.SetColumnProperty("Saldos_GV", "MESSAGE", "HeaderBackColor",V.Color.LtGreen)
+	
+	GUI.F_CompPagos_Dash.GsGridSaldos.SetColumnProperty("Saldos_GV", "INVOICE", "Width","80")
+	GUI.F_CompPagos_Dash.GsGridSaldos.SetColumnProperty("Saldos_GV", "NUMPARCIALIDAD", "Width","140")
+	GUI.F_CompPagos_Dash.GsGridSaldos.SetColumnProperty("Saldos_GV", "IMPSALDOINSOLUTO", "Width","150")
+	'GUI.F_CompPagos_Dash.GsGridSaldos.SetColumnProperty("Saldos_GV", "MESSAGE", "Width","800")
+	
+	GUI.F_CompPagos_Dash.GsGridSaldos.SetColumnProperty("Saldos_GV", "INVOICE", "HeaderFontBold",True)
+	GUI.F_CompPagos_Dash.GsGridSaldos.SetColumnProperty("Saldos_GV", "NUMPARCIALIDAD", "HeaderFontBold",True)
+	GUI.F_CompPagos_Dash.GsGridSaldos.SetColumnProperty("Saldos_GV", "IMPSALDOINSOLUTO", "HeaderFontBold",True)
+	'GUI.F_CompPagos_Dash.GsGridSaldos.SetColumnProperty("Saldos_GV", "MESSAGE", "HeaderFontBold",True)
+	
+	GUI.F_CompPagos_Dash.GsGridSaldos.SetColumnProperty("Saldos_GV", "INVOICE","HeaderHAlignment","Center")
+	GUI.F_CompPagos_Dash.GsGridSaldos.SetColumnProperty("Saldos_GV", "NUMPARCIALIDAD","HeaderHAlignment","Center")
+	GUI.F_CompPagos_Dash.GsGridSaldos.SetColumnProperty("Saldos_GV", "IMPSALDOINSOLUTO","HeaderHAlignment","Center")
+	'GUI.F_CompPagos_Dash.GsGridSaldos.SetColumnProperty("Saldos_GV", "MESSAGE","HeaderHAlignment","Center")
+	
+	GUI.F_CompPagos_Dash.GsGridSaldos.SetColumnProperty("Saldos_GV", "INVOICE","CellHAlignment","Center")
+	GUI.F_CompPagos_Dash.GsGridSaldos.SetColumnProperty("Saldos_GV", "NUMPARCIALIDAD","CellHAlignment","Center")
+	GUI.F_CompPagos_Dash.GsGridSaldos.SetColumnProperty("Saldos_GV", "IMPSALDOINSOLUTO","CellHAlignment","Center")
+	'GUI.F_CompPagos_Dash.GsGridSaldos.SetColumnProperty("Saldos_GV", "MESSAGE","CellHAlignment","Center")
+	
+	GUI.F_CompPagos_Dash.GsGridSaldos.SetColumnProperty("Saldos_GV", "INVOICE","HeaderWordWrap","Wrap")
+	GUI.F_CompPagos_Dash.GsGridSaldos.SetColumnProperty("Saldos_GV", "NUMPARCIALIDAD","HeaderWordWrap","Wrap")
+	GUI.F_CompPagos_Dash.GsGridSaldos.SetColumnProperty("Saldos_GV", "IMPSALDOINSOLUTO","HeaderWordWrap","Wrap")
+	'GUI.F_CompPagos_Dash.GsGridSaldos.SetColumnProperty("Saldos_GV", "MESSAGE","HeaderWordWrap","Wrap")
+	
+	'GUI.F_CompPagos_Dash.GsGridSaldos.SetColumnProperty("Saldos_GV", "MESSAGE","CellBackColor","LightYellow")
+
+	GUI.F_CompPagos_Dash.GsGridSaldos.ResumeLayout()
+	GUI.F_CompPagos_Dash.GsGridSaldos.MainView("Saldos_GV")
+
+
+F.Intrinsic.Control.Catch
+	F.Intrinsic.String.Build("Project: {0}{1}{1}Subroutine: {2}{1}Error Occurred {3} with description {4}{1}{1}GAB Version: {5}",V.Ambient.ScriptPath,V.Ambient.Newline,V.Ambient.CurrentSubroutine,V.Ambient.ErrorNumber,V.Ambient.ErrorDescription,V.Ambient.GABVersion,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+	f.Intrinsic.Control.CallSub(UnLoad)
+	F.Intrinsic.Control.End
+F.Intrinsic.Control.EndTry
+Program.Sub.SaldosTab.End
+
+'''''''''''''NOTAS DE CREDITO TAB'''''''''''
+Program.Sub.NCLoad.Start
+F.Intrinsic.Control.Try
+V.Local.sError.Declare
+
+	GUI.F_CompPagos_Dash.lblStatus.Visible(True)
+	
+	GUI.F_CompPagos_Dash.pbStatus.Value(0)
+	GUI.F_CompPagos_Dash.pbStatus.Visible(True)
+	
+
+	'Load DataTable & DataView
+	F.Intrinsic.Control.CallSub(NCTab)
+	
+	
+	GUI.F_CompPagos_Dash.lblStatus.Visible(False)
+	GUI.F_CompPagos_Dash.pbStatus.Visible(False)
+
+F.Intrinsic.Control.Catch
+	F.Intrinsic.String.Build("Project: {0}{1}{1}Subroutine: {2}{1}Error Occurred {3} with description {4}{1}{1}GAB Version: {5}",V.Ambient.ScriptPath,V.Ambient.Newline,V.Ambient.CurrentSubroutine,V.Ambient.ErrorNumber,V.Ambient.ErrorDescription,V.Ambient.GABVersion,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+	f.Intrinsic.Control.CallSub(UnLoad)
+	F.Intrinsic.Control.End
+F.Intrinsic.Control.EndTry
+Program.Sub.NCLoad.End
+
+Program.Sub.NCTab.Start
+F.Intrinsic.Control.Try
+V.Local.sError.Declare
+v.Local.sQuery.Declare
+V.Local.sIDPagos.Declare
+
+	
+	GUI.F_CompPagos_Dash.lblStatus.Caption("Cargando Errores de Pago ....")
+	
+		
+	'Create Data Table
+	F.Intrinsic.Control.If(V.DataTable.NC_DT.Exists)
+		F.data.datatable.close("NC_DT")
+	F.Intrinsic.Control.EndIf
+	
+	v.Local.sQuery.Set("SELECT * FROM GAB_5016_CFDI_PAGOS4")
+
+	F.Data.DataTable.CreateFromSQL("NC_DT","con",v.Local.sQuery,True)
+
+	GUI.F_CompPagos_Dash.GsGridNotasCredito.AddGridviewFromDatatable("NC_GV","NC_DT")
+	GUI.F_CompPagos_Dash.GsGridNotasCredito.SuspendLayout()
+	GUI.F_CompPagos_Dash.GsGridNotasCredito.SetGridViewProperty("NC_GV","MultiSelect",True)
+	GUI.F_CompPagos_Dash.GsGridNotasCredito.SetGridViewProperty("NC_GV","AllowSort",True)
+	GUI.F_CompPagos_Dash.GsGridNotasCredito.SetGridViewProperty("NC_GV","AllowFilter",True)
+	GUI.F_CompPagos_Dash.GsGridNotasCredito.SetGridViewProperty("NC_GV","OptionsDetailShowDetailTabs",False)
+	GUI.F_CompPagos_Dash.GsGridNotasCredito.SetGridViewProperty("NC_GV","OptionsViewShowFilterPanelMode",True)
+	GUI.F_CompPagos_Dash.GsGridNotasCredito.SetGridViewProperty("NC_GV","OptionsViewShowGroupPanel",True)
+	GUI.F_CompPagos_Dash.GsGridNotasCredito.SetGridViewProperty("NC_GV","OptionsViewColumnAutoWidth",False)
+	
+	GUI.F_CompPagos_Dash.GsGridNotasCredito.SetGridViewProperty("NC_GV","OptionsViewRowAutoHeight",True)
+	GUI.F_CompPagos_Dash.GsGridNotasCredito.SetGridViewProperty("NC_GV","ColumnPanelRowHeight",80)
+	
+	GUI.F_CompPagos_Dash.GsGridNotasCredito.SetColumnProperty("NC_GV", "INVOICE", "Caption", "ID PAGOS")
+	GUI.F_CompPagos_Dash.GsGridNotasCredito.SetColumnProperty("NC_GV", "AMT_CM", "Caption", "SALDO")
+	GUI.F_CompPagos_Dash.GsGridNotasCredito.SetColumnProperty("NC_GV", "REFERENCE", "Caption", "REFERENCIA")
+	GUI.F_CompPagos_Dash.GsGridNotasCredito.SetColumnProperty("NC_GV", "COMP_FLAG", "Caption", "EXPORTADO A BATCH")
+	
+	GUI.F_CompPagos_Dash.GsGridNotasCredito.SetColumnProperty("NC_GV", "INVOICE", "HeaderBackColor",V.Color.LtGreen)
+	GUI.F_CompPagos_Dash.GsGridNotasCredito.SetColumnProperty("NC_GV", "AMT_CM", "HeaderBackColor",V.Color.LtGreen)
+	GUI.F_CompPagos_Dash.GsGridNotasCredito.SetColumnProperty("NC_GV", "REFERENCE", "HeaderBackColor",V.Color.LtGreen)
+	GUI.F_CompPagos_Dash.GsGridNotasCredito.SetColumnProperty("NC_GV", "COMP_FLAG", "HeaderBackColor",V.Color.LtGreen)
+	
+	GUI.F_CompPagos_Dash.GsGridNotasCredito.SetColumnProperty("NC_GV", "INVOICE", "Width","80")
+	GUI.F_CompPagos_Dash.GsGridNotasCredito.SetColumnProperty("NC_GV", "AMT_CM", "Width","140")
+	GUI.F_CompPagos_Dash.GsGridNotasCredito.SetColumnProperty("NC_GV", "REFERENCE", "Width","150")
+	GUI.F_CompPagos_Dash.GsGridNotasCredito.SetColumnProperty("NC_GV", "COMP_FLAG", "Width","800")
+	
+	GUI.F_CompPagos_Dash.GsGridNotasCredito.SetColumnProperty("NC_GV", "INVOICE", "HeaderFontBold",True)
+	GUI.F_CompPagos_Dash.GsGridNotasCredito.SetColumnProperty("NC_GV", "AMT_CM", "HeaderFontBold",True)
+	GUI.F_CompPagos_Dash.GsGridNotasCredito.SetColumnProperty("NC_GV", "REFERENCE", "HeaderFontBold",True)
+	GUI.F_CompPagos_Dash.GsGridNotasCredito.SetColumnProperty("NC_GV", "COMP_FLAG", "HeaderFontBold",True)
+	
+	GUI.F_CompPagos_Dash.GsGridNotasCredito.SetColumnProperty("NC_GV", "INVOICE","HeaderHAlignment","Center")
+	GUI.F_CompPagos_Dash.GsGridNotasCredito.SetColumnProperty("NC_GV", "AMT_CM","HeaderHAlignment","Center")
+	GUI.F_CompPagos_Dash.GsGridNotasCredito.SetColumnProperty("NC_GV", "REFERENCE","HeaderHAlignment","Center")
+	GUI.F_CompPagos_Dash.GsGridNotasCredito.SetColumnProperty("NC_GV", "COMP_FLAG","HeaderHAlignment","Center")
+	
+	GUI.F_CompPagos_Dash.GsGridNotasCredito.SetColumnProperty("NC_GV", "INVOICE","CellHAlignment","Center")
+	GUI.F_CompPagos_Dash.GsGridNotasCredito.SetColumnProperty("NC_GV", "AMT_CM","CellHAlignment","Center")
+	GUI.F_CompPagos_Dash.GsGridNotasCredito.SetColumnProperty("NC_GV", "REFERENCE","CellHAlignment","Center")
+	GUI.F_CompPagos_Dash.GsGridNotasCredito.SetColumnProperty("NC_GV", "COMP_FLAG","CellHAlignment","Center")
+	
+	GUI.F_CompPagos_Dash.GsGridNotasCredito.SetColumnProperty("NC_GV", "INVOICE","HeaderWordWrap","Wrap")
+	GUI.F_CompPagos_Dash.GsGridNotasCredito.SetColumnProperty("NC_GV", "AMT_CM","HeaderWordWrap","Wrap")
+	GUI.F_CompPagos_Dash.GsGridNotasCredito.SetColumnProperty("NC_GV", "REFERENCE","HeaderWordWrap","Wrap")
+	GUI.F_CompPagos_Dash.GsGridNotasCredito.SetColumnProperty("NC_GV", "COMP_FLAG","HeaderWordWrap","Wrap")
+	
+	GUI.F_CompPagos_Dash.GsGridNotasCredito.SetColumnProperty("NC_GV", "COMP_FLAG","CellBackColor","LightYellow")
+
+	GUI.F_CompPagos_Dash.GsGridNotasCredito.ResumeLayout()
+	GUI.F_CompPagos_Dash.GsGridNotasCredito.MainView("NC_GV")
+
+
+F.Intrinsic.Control.Catch
+	F.Intrinsic.String.Build("Project: {0}{1}{1}Subroutine: {2}{1}Error Occurred {3} with description {4}{1}{1}GAB Version: {5}",V.Ambient.ScriptPath,V.Ambient.Newline,V.Ambient.CurrentSubroutine,V.Ambient.ErrorNumber,V.Ambient.ErrorDescription,V.Ambient.GABVersion,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+	f.Intrinsic.Control.CallSub(UnLoad)
+	F.Intrinsic.Control.End
+F.Intrinsic.Control.EndTry
+Program.Sub.NCTab.End
+
+'''''EXPORT TO EXCEL'''''''''''
+Program.Sub.cmdExport_Click.Start
+F.Intrinsic.Control.Try
+'Function.Intrinsic.Debug.InvokeDebugger
+V.Local.sError.Declare
+
+	F.Intrinsic.Control.Try
+
+	F.Intrinsic.Control.SelectCase(V.Screen.F_CompPagos_Dash!tabGridDocRel.Tab)
+		F.Intrinsic.Control.Case(0)			'Tab Doc Rel
+			F.Intrinsic.Control.CallSub(DocRel_ContextMenuExport)
+
+		F.Intrinsic.Control.Case(1)			'Tab Errores
+			F.Intrinsic.Control.CallSub(Errores_ContextMenuExport)
+	F.Intrinsic.Control.EndSelect			
+
+	
+	F.Intrinsic.Control.SelectCase(V.Screen.F_CompPagos_Dash!tabGridPagos.Tab)
+		F.Intrinsic.Control.Case(0)			'Tab Pagos
+			F.Intrinsic.Control.CallSub(Pagos_ContextMenuExport)
+	F.Intrinsic.Control.EndSelect			
+
+
+	F.Intrinsic.Control.Catch
+	F.Intrinsic.String.Build("Project: {0}{1}{1}Subroutine: {2}{1}Error Occurred {3} with description {4}{1}{1}GAB Version: {5}",V.Ambient.ScriptPath,V.Ambient.Newline,V.Ambient.CurrentSubroutine,V.Ambient.ErrorNumber,V.Ambient.ErrorDescription,V.Ambient.GABVersion,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+	f.Intrinsic.Control.CallSub(UnLoad)
+	F.Intrinsic.Control.End
+
+F.Intrinsic.Control.EndTry
+Program.Sub.cmdExport_Click.End
+
+Program.Sub.DocRel_ContextMenuExport.Start
+V.Local.sError.Declare(String)
+V.Local.sFileExport.Declare(String)
+V.Local.bExcel.Declare(Boolean)
+V.Local.sMsg.Declare(String)
+
+F.Intrinsic.Control.Try
+
+	F.Automation.MSExcel.CheckPresence(V.Local.bExcel)
+	F.Intrinsic.String.Format(V.Ambient.Date,"YYYYMMDD",V.Local.sMsg)
+	
+	F.Intrinsic.Control.If(V.Local.bExcel,=,True)
+		F.Intrinsic.UI.ShowSaveFileDialog("","*.xlsx|",V.Local.sFileExport)
+	F.Intrinsic.Control.Else
+		F.Intrinsic.UI.ShowSaveFileDialog("","*.csv|",V.Local.sFileExport)
+	F.Intrinsic.Control.EndIf
+	
+	F.Intrinsic.Control.If(V.Local.sFileExport,<>,"***CANCEL***")
+		F.Intrinsic.Control.If(V.Local.bExcel,=,True)
+			F.Intrinsic.String.Concat(V.Local.sFileExport,".xlsx",V.Local.sFileExport)
+			gui.F_CompPagos_Dash.GsGridDocRel.Export(V.Local.sFileExport,"xlsx")
+		F.Intrinsic.Control.Else
+			F.Intrinsic.String.Concat(V.Local.sFileExport,".csv",V.Local.sFileExport)
+			gui.F_CompPagos_Dash.GsGridDocRel.Export(V.Local.sFileExport,"csv")
+		F.Intrinsic.Control.EndIf
+		F.Intrinsic.String.Concat("Cuadricula exportada a ",V.Local.sFileExport,V.Local.sMsg)
+		F.Intrinsic.UI.Msgbox(V.Local.sMsg)
+		F.Intrinsic.Task.ShellExec(0,"",V.Local.sFileExport,"","",1)
+	F.Intrinsic.Control.EndIf
+
+
+
+
+F.Intrinsic.Control.Catch
+F.Intrinsic.String.Build("Project: {0}{1}{1}Subroutine: {2}{1}Error Occurred {3} with description {4}{1}{1}GAB Version: {5}", V.Ambient.ScriptPath, V.Ambient.Newline, V.Ambient.CurrentSubroutine, V.Ambient.ErrorNumber, V.Ambient.ErrorDescription, V.Ambient.GABVersion, V.Global.sError)
+F.Intrinsic.UI.Msgbox(V.Local.sError)
+f.Intrinsic.Control.CallSub(FrmDireccion_UnLoad)
+F.Intrinsic.Control.End
+
+F.Intrinsic.Control.EndTry
+Program.Sub.DocRel_ContextMenuExport.End
+
+Program.Sub.Pagos_ContextMenuExport.Start
+V.Local.sError.Declare(String)
+V.Local.sFileExport.Declare(String)
+V.Local.bExcel.Declare(Boolean)
+V.Local.sMsg.Declare(String)
+
+F.Intrinsic.Control.Try
+
+	F.Automation.MSExcel.CheckPresence(V.Local.bExcel)
+	F.Intrinsic.String.Format(V.Ambient.Date,"YYYYMMDD",V.Local.sMsg)
+	
+	F.Intrinsic.Control.If(V.Local.bExcel,=,True)
+		F.Intrinsic.UI.ShowSaveFileDialog("","*.xlsx|",V.Local.sFileExport)
+	F.Intrinsic.Control.Else
+		F.Intrinsic.UI.ShowSaveFileDialog("","*.csv|",V.Local.sFileExport)
+	F.Intrinsic.Control.EndIf
+	
+	F.Intrinsic.Control.If(V.Local.sFileExport,<>,"***CANCEL***")
+		F.Intrinsic.Control.If(V.Local.bExcel,=,True)
+			F.Intrinsic.String.Concat(V.Local.sFileExport,".xlsx",V.Local.sFileExport)
+			gui.F_CompPagos_Dash.GsGridPago.Export(V.Local.sFileExport,"xlsx")
+		F.Intrinsic.Control.Else
+			F.Intrinsic.String.Concat(V.Local.sFileExport,".csv",V.Local.sFileExport)
+			gui.F_CompPagos_Dash.GsGridPago.Export(V.Local.sFileExport,"csv")
+		F.Intrinsic.Control.EndIf
+		F.Intrinsic.String.Concat("Cuadricula exportada a ",V.Local.sFileExport,V.Local.sMsg)
+		F.Intrinsic.UI.Msgbox(V.Local.sMsg)
+		F.Intrinsic.Task.ShellExec(0,"",V.Local.sFileExport,"","",1)
+	F.Intrinsic.Control.EndIf
+
+
+
+
+F.Intrinsic.Control.Catch
+F.Intrinsic.String.Build("Project: {0}{1}{1}Subroutine: {2}{1}Error Occurred {3} with description {4}{1}{1}GAB Version: {5}", V.Ambient.ScriptPath, V.Ambient.Newline, V.Ambient.CurrentSubroutine, V.Ambient.ErrorNumber, V.Ambient.ErrorDescription, V.Ambient.GABVersion, V.Global.sError)
+F.Intrinsic.UI.Msgbox(V.Local.sError)
+f.Intrinsic.Control.CallSub(FrmDireccion_UnLoad)
+F.Intrinsic.Control.End
+
+F.Intrinsic.Control.EndTry
+Program.Sub.Pagos_ContextMenuExport.End
+
+Program.Sub.Errores_ContextMenuExport.Start
+V.Local.sError.Declare(String)
+V.Local.sFileExport.Declare(String)
+V.Local.bExcel.Declare(Boolean)
+V.Local.sMsg.Declare(String)
+
+F.Intrinsic.Control.Try
+
+	F.Automation.MSExcel.CheckPresence(V.Local.bExcel)
+	F.Intrinsic.String.Format(V.Ambient.Date,"YYYYMMDD",V.Local.sMsg)
+	
+	F.Intrinsic.Control.If(V.Local.bExcel,=,True)
+		F.Intrinsic.UI.ShowSaveFileDialog("","*.xlsx|",V.Local.sFileExport)
+	F.Intrinsic.Control.Else
+		F.Intrinsic.UI.ShowSaveFileDialog("","*.csv|",V.Local.sFileExport)
+	F.Intrinsic.Control.EndIf
+	
+	F.Intrinsic.Control.If(V.Local.sFileExport,<>,"***CANCEL***")
+		F.Intrinsic.Control.If(V.Local.bExcel,=,True)
+			F.Intrinsic.String.Concat(V.Local.sFileExport,".xlsx",V.Local.sFileExport)
+			gui.F_CompPagos_Dash.GsGridErrores.Export(V.Local.sFileExport,"xlsx")
+		F.Intrinsic.Control.Else
+			F.Intrinsic.String.Concat(V.Local.sFileExport,".csv",V.Local.sFileExport)
+			gui.F_CompPagos_Dash.GsGridErrores.Export(V.Local.sFileExport,"csv")
+		F.Intrinsic.Control.EndIf
+		F.Intrinsic.String.Concat("Cuadricula exportada a ",V.Local.sFileExport,V.Local.sMsg)
+		F.Intrinsic.UI.Msgbox(V.Local.sMsg)
+		F.Intrinsic.Task.ShellExec(0,"",V.Local.sFileExport,"","",1)
+	F.Intrinsic.Control.EndIf
+
+
+
+
+F.Intrinsic.Control.Catch
+F.Intrinsic.String.Build("Project: {0}{1}{1}Subroutine: {2}{1}Error Occurred {3} with description {4}{1}{1}GAB Version: {5}", V.Ambient.ScriptPath, V.Ambient.Newline, V.Ambient.CurrentSubroutine, V.Ambient.ErrorNumber, V.Ambient.ErrorDescription, V.Ambient.GABVersion, V.Global.sError)
+F.Intrinsic.UI.Msgbox(V.Local.sError)
+f.Intrinsic.Control.CallSub(FrmDireccion_UnLoad)
+F.Intrinsic.Control.End
+
+F.Intrinsic.Control.EndTry
+Program.Sub.Errores_ContextMenuExport.End
+
+
+'''''VERIFICADOR DE SALDOS'''''''''''
+
+'''''REVISION DE SALDO INSOLUTO'''''''''''
+Program.Sub.chkBatch_Click.Start
+F.Intrinsic.Control.Try
+V.Local.sError.Declare
+
+	f.Intrinsic.Control.If(v.Screen.F_SaldoInsoluto!chkBatch.Value,=,1)
+		gui.F_SaldoInsoluto.chkInvoice.Value(0)
+		gui.F_SaldoInsoluto.cmdInvoiceI.Visible(False)
+		gui.F_SaldoInsoluto.txtInvoiceI.Visible(True)
+		gui.F_SaldoInsoluto.lblInvoiceI.Visible(True)
+		gui.F_SaldoInsoluto.txtNumPar.Visible(False)
+		gui.F_SaldoInsoluto.lblNumParI.Visible(False)
+		gui.F_SaldoInsoluto.txtSaldoXInvoice.Visible(False)
+		gui.F_SaldoInsoluto.lblSaldoXInvoice.Visible(False)
+		gui.F_SaldoInsoluto.cmdSaveSaldoInsolutoXInvoice.Visible(False)
+		gui.F_SaldoInsoluto.lblBatchB.Visible(True)
+		gui.F_SaldoInsoluto.txtBatchB.Visible(True)
+		gui.F_SaldoInsoluto.cmdBatchB.Visible(True)
+		gui.F_SaldoInsoluto.txtIDDoc.Visible(True)
+		gui.F_SaldoInsoluto.lblIDocB.Visible(True)
+		gui.F_SaldoInsoluto.txtSaldoAntB.Visible(True)
+		gui.F_SaldoInsoluto.lblSalAntB.Visible(True)
+		gui.F_SaldoInsoluto.txtImpPagB.Visible(True)
+		gui.F_SaldoInsoluto.lblImpPagadoB.Visible(True)
+		gui.F_SaldoInsoluto.txtSaldoInsolutoXBatch.Visible(True)
+		gui.F_SaldoInsoluto.lblSaldoxBatch.Visible(True)
+		gui.F_SaldoInsoluto.cmdSaveSaldoInsolutoXBatch.Visible(True)
+		gui.F_SaldoInsoluto.cmdStartPay.Visible(True)
+		gui.F_SaldoInsoluto.cmdStopPay.Visible(True)
+		gui.F_SaldoInsoluto.lblTimbrar.Visible(True)
+		gui.F_SaldoInsoluto.txtTimbrar.Visible(True)
+		gui.F_SaldoInsoluto.lblTimbrar2.Visible(True)
+	F.Intrinsic.Control.Else
+		gui.F_SaldoInsoluto.chkInvoice.Value(1)
+		gui.F_SaldoInsoluto.cmdInvoiceI.Visible(True)
+		gui.F_SaldoInsoluto.txtInvoiceI.Visible(True)
+		gui.F_SaldoInsoluto.lblInvoiceI.Visible(True)
+		gui.F_SaldoInsoluto.txtNumPar.Visible(True)
+		gui.F_SaldoInsoluto.lblNumParI.Visible(True)
+		gui.F_SaldoInsoluto.txtSaldoXInvoice.Visible(True)
+		gui.F_SaldoInsoluto.lblSaldoXInvoice.Visible(True)
+		gui.F_SaldoInsoluto.cmdSaveSaldoInsolutoXInvoice.Visible(True)
+		gui.F_SaldoInsoluto.lblBatchB.Visible(True)
+		gui.F_SaldoInsoluto.txtBatchB.Visible(True)
+		gui.F_SaldoInsoluto.cmdBatchB.Visible(False)
+		gui.F_SaldoInsoluto.txtIDDoc.Visible(False)
+		gui.F_SaldoInsoluto.lblIDocB.Visible(False)
+		gui.F_SaldoInsoluto.txtSaldoAntB.Visible(False)
+		gui.F_SaldoInsoluto.lblSalAntB.Visible(False)
+		gui.F_SaldoInsoluto.txtImpPagB.Visible(False)
+		gui.F_SaldoInsoluto.lblImpPagadoB.Visible(False)
+		gui.F_SaldoInsoluto.txtSaldoInsolutoXBatch.Visible(False)
+		gui.F_SaldoInsoluto.lblSaldoxBatch.Visible(False)
+		gui.F_SaldoInsoluto.cmdSaveSaldoInsolutoXBatch.Visible(False)
+		gui.F_SaldoInsoluto.cmdStartPay.Visible(False)
+		gui.F_SaldoInsoluto.cmdStopPay.Visible(False)
+		gui.F_SaldoInsoluto.lblTimbrar.Visible(False)
+		gui.F_SaldoInsoluto.txtTimbrar.Visible(False)
+		gui.F_SaldoInsoluto.lblTimbrar2.Visible(False)
+	f.Intrinsic.Control.EndIf
+
+	 	gui.F_SaldoInsoluto.txtInvoiceI.Text("")
+	 	gui.F_SaldoInsoluto.txtNumPar.Text("")
+	 	gui.F_SaldoInsoluto.txtSaldoXInvoice.Text("")
+
+F.Intrinsic.Control.Catch
+	F.Intrinsic.String.Build("Project: {0}{1}{1}Subroutine: {2}{1}Error Occurred {3} with description {4}{1}{1}GAB Version: {5}",V.Ambient.ScriptPath,V.Ambient.Newline,V.Ambient.CurrentSubroutine,V.Ambient.ErrorNumber,V.Ambient.ErrorDescription,V.Ambient.GABVersion,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+	f.Intrinsic.Control.CallSub(UnLoad)
+	F.Intrinsic.Control.End
+
+F.Intrinsic.Control.EndTry
+Program.Sub.chkBatch_Click.End
+
+Program.Sub.chkInvoice_Click.Start
+F.Intrinsic.Control.Try
+V.Local.sError.Declare
+
+	f.Intrinsic.Control.If(v.Screen.F_SaldoInsoluto!chkInvoice.Value,=,1)
+		gui.F_SaldoInsoluto.chkBatch.Value(0)
+		gui.F_SaldoInsoluto.cmdInvoiceI.Visible(True)
+		gui.F_SaldoInsoluto.txtInvoiceI.Visible(True)
+		gui.F_SaldoInsoluto.lblInvoiceI.Visible(True)
+		gui.F_SaldoInsoluto.txtNumPar.Visible(True)
+		gui.F_SaldoInsoluto.lblNumParI.Visible(True)
+		gui.F_SaldoInsoluto.lblInvoiceI.Visible(True)
+		gui.F_SaldoInsoluto.txtSaldoXInvoice.Visible(True)
+		gui.F_SaldoInsoluto.lblSaldoXInvoice.Visible(True)
+		gui.F_SaldoInsoluto.lblInvoiceI.Visible(True)
+		gui.F_SaldoInsoluto.cmdSaveSaldoInsolutoXInvoice.Visible(True)
+		gui.F_SaldoInsoluto.lblBatchB.Visible(False)
+		gui.F_SaldoInsoluto.txtBatchB.Visible(False)
+		gui.F_SaldoInsoluto.cmdBatchB.Visible(False)
+		gui.F_SaldoInsoluto.txtIDDoc.Visible(False)
+		gui.F_SaldoInsoluto.lblIDocB.Visible(False)
+		gui.F_SaldoInsoluto.txtSaldoAntB.Visible(False)
+		gui.F_SaldoInsoluto.lblSalAntB.Visible(False)
+		gui.F_SaldoInsoluto.txtImpPagB.Visible(False)
+		gui.F_SaldoInsoluto.lblImpPagadoB.Visible(False)
+		gui.F_SaldoInsoluto.txtSaldoInsolutoXBatch.Visible(False)
+		gui.F_SaldoInsoluto.lblSaldoxBatch.Visible(False)
+		gui.F_SaldoInsoluto.cmdSaveSaldoInsolutoXBatch.Visible(False)
+	F.Intrinsic.Control.Else
+		gui.F_SaldoInsoluto.chkBatch.Value(1)
+		gui.F_SaldoInsoluto.cmdInvoiceI.Visible(False)
+		gui.F_SaldoInsoluto.txtInvoiceI.Visible(False)
+		gui.F_SaldoInsoluto.lblInvoiceI.Visible(False)
+		gui.F_SaldoInsoluto.txtNumPar.Visible(False)
+		gui.F_SaldoInsoluto.lblNumParI.Visible(False)
+		gui.F_SaldoInsoluto.lblInvoiceI.Visible(False)
+		gui.F_SaldoInsoluto.txtSaldoXInvoice.Visible(False)
+		gui.F_SaldoInsoluto.lblSaldoXInvoice.Visible(False)
+		gui.F_SaldoInsoluto.lblInvoiceI.Visible(False)
+		gui.F_SaldoInsoluto.cmdSaveSaldoInsolutoXInvoice.Visible(False)
+		gui.F_SaldoInsoluto.lblBatchB.Visible(True)
+		gui.F_SaldoInsoluto.txtBatchB.Visible(True)
+		gui.F_SaldoInsoluto.cmdBatchB.Visible(True)
+		gui.F_SaldoInsoluto.txtIDDoc.Visible(True)
+		gui.F_SaldoInsoluto.lblIDocB.Visible(True)
+		gui.F_SaldoInsoluto.txtSaldoAntB.Visible(True)
+		gui.F_SaldoInsoluto.lblSalAntB.Visible(True)
+		gui.F_SaldoInsoluto.txtImpPagB.Visible(True)
+		gui.F_SaldoInsoluto.lblImpPagadoB.Visible(True)
+		gui.F_SaldoInsoluto.txtSaldoInsolutoXBatch.Visible(True)
+		gui.F_SaldoInsoluto.lblSaldoxBatch.Visible(True)
+		gui.F_SaldoInsoluto.cmdSaveSaldoInsolutoXBatch.Visible(True)
+	f.Intrinsic.Control.EndIf
+
+	 	gui.F_SaldoInsoluto.txtInvoiceI.Text("")
+	 	gui.F_SaldoInsoluto.txtBatchB.Text("")
+	 	gui.F_SaldoInsoluto.txtIDDoc.Text("")
+	 	gui.F_SaldoInsoluto.txtSaldoAntB.Text("")
+	 	gui.F_SaldoInsoluto.txtImpPagB.Text("")
+	 	gui.F_SaldoInsoluto.txtSaldoInsolutoXBatch.Text("")
+	 	gui.F_SaldoInsoluto.txtTimbrar.Text("")
+
+F.Intrinsic.Control.Catch
+	F.Intrinsic.String.Build("Project: {0}{1}{1}Subroutine: {2}{1}Error Occurred {3} with description {4}{1}{1}GAB Version: {5}",V.Ambient.ScriptPath,V.Ambient.Newline,V.Ambient.CurrentSubroutine,V.Ambient.ErrorNumber,V.Ambient.ErrorDescription,V.Ambient.GABVersion,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+	f.Intrinsic.Control.CallSub(UnLoad)
+	F.Intrinsic.Control.End
+
+F.Intrinsic.Control.EndTry
+Program.Sub.chkInvoice_Click.End
+
+Program.Sub.cmdInvoiceI_Click.Start
+F.Intrinsic.Control.Try
+V.Local.sError.Declare
+
+	v.Local.sRet.Declare(string)
+	v.Local.sTitles.Declare(string)
+	v.Local.iWidths.Declare(long)
+	'FROM A CUSTOM BROWSER GET THE BATCH INFORMATION FROM CFDI_COMPAGOS_DOCREL
+	F.Intrinsic.String.Split("INVOICE*!*NUMPARCIALIDAD*!*IMPSALDOINSOLUTO","*!*",v.local.sTitles)
+	F.Intrinsic.String.Split("400*!*800*!*800","*!*",v.local.iWidths)
+	F.Intrinsic.UI.SetBrowserHotTypeAhead(True)
+	F.Intrinsic.UI.Browser("Selecciona Factura","CON","select INVOICE, NUMPARCIALIDAD, IMPSALDOINSOLUTO from GAB_5016_CFDI_PAGOS3",v.Local.sTitles,v.Local.iWidths,v.Local.sRet)
+	F.Intrinsic.Control.If(v.Local.sRet,"=","***CANCEL***")
+	 F.Intrinsic.Control.Else
+	 F.Intrinsic.String.Split(v.Local.sRet,"*!*",v.Local.sRet)
+	 	gui.F_SaldoInsoluto.txtInvoiceI.Text(V.Local.sRet(0).Trim)
+	 	gui.F_SaldoInsoluto.txtNumPar.Text(V.Local.sRet(1).Trim)
+	 	gui.F_SaldoInsoluto.txtSaldoXInvoice.Text(V.Local.sRet(2).Trim)
+	F.Intrinsic.Control.EndIf
+
+F.Intrinsic.Control.Catch
+	F.Intrinsic.String.Build("Project: {0}{1}{1}Subroutine: {2}{1}Error Occurred {3} with description {4}{1}{1}GAB Version: {5}",V.Ambient.ScriptPath,V.Ambient.Newline,V.Ambient.CurrentSubroutine,V.Ambient.ErrorNumber,V.Ambient.ErrorDescription,V.Ambient.GABVersion,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+	f.Intrinsic.Control.CallSub(UnLoad)
+	F.Intrinsic.Control.End
+F.Intrinsic.Control.EndTry
+Program.Sub.cmdInvoiceI_Click.End
+
+Program.Sub.cmdSaveSaldoInsolutoXInvoice_Click.Start
+F.Intrinsic.Control.Try
+	V.Local.sError.Declare
+	V.Local.sSQL.Declare
+	v.local.sInvoice.Declare
+		
+	V.Local.sInvoice.Set(V.Screen.F_SaldoInsoluto!txtInvoiceI.Text)
+
+	
+	F.Intrinsic.String.Build("SELECT * FROM GAB_5016_CFDI_PAGOS3 WHERE INVOICE = '{0}' ",v.Local.sInvoice,V.Local.sSQL)
+	F.ODBC.Connection!CON.OpenLocalRecordsetRW("RST",v.Local.sSQL)
+	F.Intrinsic.Control.If(v.ODBC.CON!RST.EOF,=,True)
+		F.ODBC.CON!RST.AddNew
+		F.ODBC.CON!RST.Set!INVOICE(v.Local.sInvoice)
+	f.Intrinsic.Control.EndIf
+	F.ODBC.CON!RST.Set!NUMPARCIALIDAD(v.Screen.F_SaldoInsoluto!txtNumPar.Text)
+	F.ODBC.CON!RST.Set!IMPSALDOINSOLUTO(v.Screen.F_SaldoInsoluto!txtSaldoXInvoice.Text)
+	F.ODBC.CON!RST.Update
+	F.Intrinsic.UI.Msgbox("SALDOS DE FACTURA ACTUALIZADO")
+	F.ODBC.CON!RST.Close
+	
+	
+F.Intrinsic.Control.Catch
+	F.Intrinsic.String.Build("Project: {0}{1}{1}Subroutine: {2}{1}Error Occurred {3} with description {4}{1}{1}GAB Version: {5}",V.Ambient.ScriptPath,V.Ambient.Newline,V.Ambient.CurrentSubroutine,V.Ambient.ErrorNumber,V.Ambient.ErrorDescription,V.Ambient.GABVersion,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+	f.Intrinsic.Control.CallSub(UnLoad)
+	F.Intrinsic.Control.End
+F.Intrinsic.Control.EndTry
+Program.Sub.cmdSaveSaldoInsolutoXInvoice_Click.End
+
+Program.Sub.cmdBatchB_Click.Start
+F.Intrinsic.Control.Try
+V.Local.sError.Declare
+
+	v.Local.sRet.Declare(string)
+	v.Local.sTitles.Declare(string)
+	v.Local.iWidths.Declare(long)
+	'FROM A CUSTOM BROWSER GET THE BATCH INFORMATION FROM CFDI_COMPAGOS_DOCREL
+	F.Intrinsic.String.Split("FACTURA*!*BATCH*!*IDDOCUMENTO*!*IMPSALDOANT*!*IMPPAGADO*!*IMPSALDOINSOLUTO*!*TIMBRAR","*!*",v.local.sTitles)
+	F.Intrinsic.String.Split("400*!*800*!*800*!*800*!*800*!*800*!*400","*!*",v.local.iWidths)
+	F.Intrinsic.UI.SetBrowserHotTypeAhead(True)
+	F.Intrinsic.UI.Browser("Selecciona ID PAGOS","CON","select DR.NO_FACTURA, DR.ID_PAGOS, DR.IDDOCUMENTO, DR.IMPSALDOANT, DR.IMPPAGADO, DR.IMPSALDOINSOLUTO, P.TIMBRAR from CFDI_COMPAGOS_DOCREL DR LEFT JOIN CFDI_COMPAGOS_PAGO P ON DR.ID_PAGOS = P.ID_PAGOS",v.Local.sTitles,v.Local.iWidths,v.Local.sRet)
+	F.Intrinsic.Control.If(v.Local.sRet,"=","***CANCEL***")
+	 F.Intrinsic.Control.Else
+	 F.Intrinsic.String.Split(v.Local.sRet,"*!*",v.Local.sRet)
+	 	gui.F_SaldoInsoluto.txtInvoiceI.Text(V.Local.sRet(0).Trim)
+	 	gui.F_SaldoInsoluto.txtBatchB.Text(V.Local.sRet(1).Trim)
+	 	gui.F_SaldoInsoluto.txtIDDoc.Text(V.Local.sRet(2).Trim)
+	 	gui.F_SaldoInsoluto.txtSaldoAntB.Text(V.Local.sRet(3).Trim)
+	 	gui.F_SaldoInsoluto.txtImpPagB.Text(V.Local.sRet(4).Trim)
+	 	gui.F_SaldoInsoluto.txtSaldoInsolutoXBatch.Text(V.Local.sRet(5).Trim)
+	 	gui.F_SaldoInsoluto.txtTimbrar.Text(V.Local.sRet(6).Trim)
+	F.Intrinsic.Control.EndIf
+
+F.Intrinsic.Control.Catch
+	F.Intrinsic.String.Build("Project: {0}{1}{1}Subroutine: {2}{1}Error Occurred {3} with description {4}{1}{1}GAB Version: {5}",V.Ambient.ScriptPath,V.Ambient.Newline,V.Ambient.CurrentSubroutine,V.Ambient.ErrorNumber,V.Ambient.ErrorDescription,V.Ambient.GABVersion,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+	f.Intrinsic.Control.CallSub(UnLoad)
+	F.Intrinsic.Control.End
+F.Intrinsic.Control.EndTry
+Program.Sub.cmdBatchB_Click.End
+
+Program.Sub.cmdSaveSaldoInsolutoXBatch_Click.Start
+F.Intrinsic.Control.Try
+	V.Local.sError.Declare
+	V.Local.sSQL.Declare
+	v.local.sBatch.Declare
+	v.Local.sIDDoc.Declare
+	
+	V.Local.sBatch.Set(V.Screen.F_SaldoInsoluto!txtBatchB.Text)
+	V.Local.sIDDoc.Set(v.Screen.F_SaldoInsoluto!txtIDDoc.Text)
+	
+	F.Intrinsic.String.Build("SELECT * FROM CFDI_COMPAGOS_DOCREL WHERE ID_PAGOS = '{0}' AND IDDOCUMENTO = '{1}'",v.Local.sBatch,V.Local.sIDDoc,V.Local.sSQL)
+	F.ODBC.Connection!CON.OpenLocalRecordsetRW("RST",v.Local.sSQL)
+	F.Intrinsic.Control.If(v.ODBC.CON!RST.EOF,=,True)
+		F.ODBC.CON!RST.AddNew
+		F.ODBC.CON!RST.Set!ID_PAGOS(v.Local.sBatch)
+		F.ODBC.CON!RST.Set!IDDOCUMENTO(V.Local.sIDDoc)
+	f.Intrinsic.Control.EndIf
+	F.ODBC.CON!RST.Set!IMPSALDOANT(v.Screen.F_SaldoInsoluto!txtSaldoAntB.Text)
+	F.ODBC.CON!RST.Set!IMPPAGADO(v.Screen.F_SaldoInsoluto!txtImpPagB.Text)
+	F.ODBC.CON!RST.Set!IMPSALDOINSOLUTO(v.Screen.F_SaldoInsoluto!txtSaldoInsolutoXBatch.Text)
+	F.ODBC.CON!RST.Update
+	F.Intrinsic.UI.Msgbox("SALDOS DE BATCH ACTUALIZADOS")
+	F.ODBC.CON!RST.Close
+	
+	
+F.Intrinsic.Control.Catch
+	F.Intrinsic.String.Build("Project: {0}{1}{1}Subroutine: {2}{1}Error Occurred {3} with description {4}{1}{1}GAB Version: {5}",V.Ambient.ScriptPath,V.Ambient.Newline,V.Ambient.CurrentSubroutine,V.Ambient.ErrorNumber,V.Ambient.ErrorDescription,V.Ambient.GABVersion,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+	f.Intrinsic.Control.CallSub(UnLoad)
+	F.Intrinsic.Control.End
+F.Intrinsic.Control.EndTry
+
+Program.Sub.cmdSaveSaldoInsolutoXBatch_Click.End
+
+'''''DETENER PAGO'''''''''''
+
+Program.Sub.cmdPararPago_Click.Start
+F.Intrinsic.Control.Try
+	V.Local.sError.Declare
+	V.Local.sSQL.Declare
+	v.local.sBatch.Declare
+	v.Local.sMessage.Declare
+	
+	V.Local.sBatch.Set(V.Screen.F_SaldoInsoluto!txtBatchB.Text)
+	F.Intrinsic.Control.If(V.Local.sBatch,=,"")
+		F.Intrinsic.UI.Msgbox("Favor de seleccionar la opcion deseada")
+	F.Intrinsic.Control.Else
+		F.Intrinsic.String.Build("UPDATE CFDI_COMPAGOS_PAGO SET TIMBRAR = 'P' WHERE ID_PAGOS = '{0}'",V.Local.sBatch,V.Local.sSQL)
+		F.ODBC.Connection!CON.Execute(v.Local.sSQL)
+		F.Intrinsic.String.Build("PAGO DETENIDO PARA BATCH '{0}'",V.Screen.F_SaldoInsoluto!txtBatchB.Text,V.Local.sMessage)
+		F.Intrinsic.UI.Msgbox(V.Local.sMessage)
+	F.Intrinsic.Control.EndIf
+
+gui.F_SaldoInsoluto.txtTimbrar.Text("P")
+	
+F.Intrinsic.Control.Catch
+	F.Intrinsic.String.Build("Project: {0}{1}{1}Subroutine: {2}{1}Error Occurred {3} with description {4}{1}{1}GAB Version: {5}",V.Ambient.ScriptPath,V.Ambient.Newline,V.Ambient.CurrentSubroutine,V.Ambient.ErrorNumber,V.Ambient.ErrorDescription,V.Ambient.GABVersion,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+	f.Intrinsic.Control.CallSub(UnLoad)
+	F.Intrinsic.Control.End
+F.Intrinsic.Control.EndTry
+
+Program.Sub.cmdPararPago_Click.End
+
+'''''REINICIAR PAGO'''''''''''
+Program.Sub.cmdPararPago2_Click.Start
+F.Intrinsic.Control.Try
+	V.Local.sError.Declare
+	V.Local.sSQL.Declare
+	v.local.sBatch.Declare
+	v.Local.sMessage.Declare
+	
+	
+	V.Local.sBatch.Set(V.Screen.F_SaldoInsoluto!txtBatchB.Text)
+
+	F.Intrinsic.Control.If(V.Local.sBatch,=,"")
+		F.Intrinsic.UI.Msgbox("Favor de seleccionar la opcion deseada")
+	F.Intrinsic.Control.Else
+		F.Intrinsic.String.Build("UPDATE CFDI_COMPAGOS_PAGO SET TIMBRAR = 'Y' WHERE ID_PAGOS = '{0}'",V.Local.sBatch,V.Local.sSQL)
+		F.ODBC.Connection!CON.Execute(v.Local.sSQL)
+		F.Intrinsic.String.Build("PAGO REINICIADO PARA BATCH '{0}'",V.Screen.F_SaldoInsoluto!txtBatchB.Text,V.Local.sMessage)
+		F.Intrinsic.UI.Msgbox(V.Local.sMessage)
+	F.Intrinsic.Control.EndIf
+
+	gui.F_SaldoInsoluto.txtTimbrar.Text("Y")
+	
+F.Intrinsic.Control.Catch
+	F.Intrinsic.String.Build("Project: {0}{1}{1}Subroutine: {2}{1}Error Occurred {3} with description {4}{1}{1}GAB Version: {5}",V.Ambient.ScriptPath,V.Ambient.Newline,V.Ambient.CurrentSubroutine,V.Ambient.ErrorNumber,V.Ambient.ErrorDescription,V.Ambient.GABVersion,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+	f.Intrinsic.Control.CallSub(UnLoad)
+	F.Intrinsic.Control.End
+F.Intrinsic.Control.EndTry
+
+Program.Sub.cmdPararPago2_Click.End
+
+'''''''''''UNLOAD'''''''''''
+
+Program.Sub.UnLoad.Start
+	F.ODBC.Connection!con.Close
+	F.Intrinsic.Control.End
+
+Program.Sub.UnLoad.End
+
+Program.Sub.Comments.Start
+${$5$}$2.0.0.0$}$2
+${$6$}$acardenas$}$20230720114711981$}$WOCvtxu6/EPnAvQJE4I+q+v5cNawXCaAPFm5JNb/FRsrZH0BYEVqZaMUM3C8aUw+/ZP8ShVjfIyV05cAZE1ZQg==
+Program.Sub.Comments.End
